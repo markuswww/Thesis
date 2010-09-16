@@ -1,0 +1,146 @@
+% -----------------------------------------------------------------------------
+% LaTeX-Template für die Bachelor-Thesis
+%
+% Autor:	Markus Ringel <markus.ringel@gmail.com>
+% Version:	0.1 (2009-04-22)
+% 
+% Das Template verwendet die KOMA-Script Dokumentenklassen und setzt einige
+% LaTeX Pakete vorraus, die unter Umständen nicht im Standardumfang der loka-
+% len LaTeX Distribution enthalten sind. Erhältlich sind diese Pakete über das
+% CTAN (http://www.ctan.org/). Zur Installation siehe die Dokumentation des
+% jeweiligen Pakets und der LaTeX Distribution.
+%
+% Weiterhin ist das Template auf die Verwendung von UTF-8 als Zeichenkodierung
+% ausgelegt. Dadurch können Umlaute und andere Sonderzeichen direkt verwendet
+% werden.
+%
+% Es sind für die variablen Felder auf der Titelseite und den formalen Erklär-
+% ungen Befehle definiert, mit denen diese gesetzt werden können. Siehe dazu
+% weiter unten den Abschnitt 'Vorspann'.
+%
+% Zum Übersetzen sind in der Regel folgende Durchläufe nötig:
+%  1. latex arbeit
+%  2. bibtex arbeit (nur wenn schon Zitate im Text vorhanden sind)
+%  3. makeglossaries arbeit
+%  4. latex arbeit
+%  5. latex arbeit (damit Referenzen und Verzeichnisse stimmen)
+% -----------------------------------------------------------------------------
+\documentclass[ngerman,a4paper,11pt,twoside]{scrreprt}
+
+% Erforderliche Pakete
+\usepackage[utf8]{inputenc}
+\usepackage{babel}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{multirow}
+\usepackage{ifthen}
+\usepackage{tabularx}
+
+% Laden von weiteren, nützlichen Paketen (je nach Bedarf)
+%\usepackage{subfigure} 
+%\usepackage{varioref}
+%\usepackage{framed}
+%\usepackage{url}
+% ...
+
+% Pakete für Verzeichnisse. Diese sind hier aufgeführt, da mindestens das
+% 'glossaries' Paket nach z.B. hyperref geladen werden muss.
+\usepackage{bibgerm}
+\usepackage[toc,acronym]{glossaries} % Nachfolger von 'glossary', Doku siehe
+% http://tug.ctan.org/tex-archive/macros/latex/contrib/glossaries/glossaries-manual.html
+
+% Glossar(e) laden und erstellen
+\makeglossaries
+\loadglsentries{glossar} % Name der Glossardatei (ohne .tex)
+
+% Befehlsdefinitionen
+\input{commands}
+
+% Globale Formatierungseinstellungen
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\renewcommand{\encodingdefault}{OT1}
+\renewcommand{\familydefault}{cmss} % Schriftfamilie auf Sans Serif
+\renewcommand{\glsdisplayfirst}[4]{\textit{#1#4}}
+
+% Wenn größerer Zeilenabstand gewünscht ist, je nach Schriftgröße:
+% Abstand        10pt    11pt    12pt
+% -----------------------------------
+% anderthalb     1.25    1.21    1.24
+% doppelt        1.67    1.62    1.66
+%
+%\renewcommand{\baselinestretch}{1.21}
+
+% Kopf- und Fußzeilen einrichten
+\pagestyle{fancyplain}
+\addtolength{\headwidth}{\marginparwidth}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+\lhead[\fancyplain{}{\bfseries\thepage}]%
+	{\fancyplain{}{\bfseries\rightmark}}
+\rhead[\fancyplain{}{\bfseries\leftmark}]%
+	{\fancyplain{}{\bfseries\thepage}}
+\cfoot{}
+
+\begin{document}
+% --------------------------------- Vorspann ----------------------------------
+% In den folgenden Zeilen werden die wichtigsten Informationen zur Arbeit ge-
+% setzt, die dann im Dokument an den entsprechenden Stellen eingefügt werden.
+\title{Bachelor Thesis}
+\author{Markus Ringel}
+\supervisor{Name des Referenten}
+\cosupervisor{Name des Korreferenten}
+\date{Datum der Abgabe}
+\city{Zürich}
+
+% Folgende Befehle steuern, welchen Verbreitungsformen zugestimmt wird. Nicht
+% gewünschte Verbreitungsformen entsprechend auskommentieren.
+\publishlibrary  % Einstellung der Arbeit in die Bibliothek der FHW
+\publishtitle    % Veröffentlichung des Titels der Arbeit im Internet
+\publishdocument % Veröffentlichung der Arbeit im Internet
+
+% Ab hier sollten keine Änderungen des Vorspanns nötig sein!
+% -> Weiter zum Hauptteil
+
+\pagenumbering{roman} % Bis zum ersten Kaptiel mit römischen Seitenzahlen
+
+\input{titel} % Titelseite (wird automatisch mit Werten von oben gefüllt)
+\clearemptydoublepage % Sorgt dafür, dass die nächste Seite rechts beginnt
+
+\include{po} % Erklärung zur Prüfungsordnung und Verwendung der Arbeit
+\clearemptydoublepage
+
+\tableofcontents % Inhaltsverzeichnis generieren
+\clearemptydoublepage
+
+% --------------------------------- Hauptteil ---------------------------------
+% Im diesen Teil werden die einzelnen Kapitel eingefügt, die sinnvollerweise
+% im Verzeichnis 'kapitel' abgelegt werden. Nach jedem Kapitel sollte
+% \clearemptydoublepage aufgerufen werden, um das Folgekapitel auf der rechten
+% Seite beginnen zu lassen.
+
+\include{kapitel/einleitung}
+\clearemptydoublepage
+
+%\include{kapitel/zweileitung}
+%\clearemptydoublepage
+
+% und so weiter ...
+
+% ---------------------------------- Anhänge ----------------------------------
+% In diesem Teil werden alle Anhänge eingefügt, die auch als ganz normale Kapi-
+% tel abgelegt werden.
+\appendix
+
+%\include{kapitel/einanhang}
+%\clearemptydoublepage
+
+% Ausgabe des Glossars (oder der Glossare, wenn mehrere definiert sind)
+\printglossaries
+\clearemptydoublepage
+
+% Ausgabe des Literaturverzeichnisses
+\bibliographystyle{geralpha}
+\bibliography{literatur}
+
+\end{document}

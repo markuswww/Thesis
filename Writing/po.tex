@@ -1,0 +1,31 @@
+\section*{Erklärung gemäß ABPO , Ziff. 6.4.3}
+
+Ich versichere, dass ich die Bachelor-Thesis selbstständig verfasst und keine anderen als die angegebenen Hilfsmittel benutzt habe.
+
+
+\vspace{3cm}
+\makebox[.4\linewidth][l]{\thecity, \thedate}\hfill\rule{.4\linewidth}{0.5pt}\\
+\makebox[.4\linewidth][l]{}\hfill\makebox[.4\linewidth][l]{\theauthor}
+
+\vfill
+
+\section*{Erklärung zur Verwendung der Bachelor-Thesis}
+
+Hiermit erkläre ich mein Einverständnis mit den im folgenden aufgeführten Verbreitungsformen dieser Bachelor-Thesis:
+
+\newcolumntype{Y}{>{\small\raggedright\arraybackslash}X}
+\begin{tabularx}{\linewidth}{|Y|c|c|}
+	\hline
+	\textbf{Verbreitungsform} & \textbf{Ja} & \textbf{Nein}
+	\\\hline
+	Einstellung der Arbeit in die Bibliothek der FHW & \ifthenelse{\boolean{publishlibrary}}{$\times$}{} & \ifthenelse{\boolean{publishlibrary}}{}{$\times$}
+	\\\hline
+	Veröffentlichung des Titels der Arbeit im Internet & \ifthenelse{\boolean{publishtitle}}{$\times$}{} & \ifthenelse{\boolean{publishtitle}}{}{$\times$}
+	\\\hline
+	Veröffentlichung der Arbeit im Internet & \ifthenelse{\boolean{publishdocument}}{$\times$}{} & \ifthenelse{\boolean{publishdocument}}{}{$\times$}
+	\\\hline
+\end{tabularx}
+
+\vspace{3cm}
+\makebox[.4\linewidth][l]{\thecity, \thedate}\hfill\rule{.4\linewidth}{0.5pt}\\
+\makebox[.4\linewidth][l]{}\hfill\makebox[.4\linewidth][l]{\theauthor}
