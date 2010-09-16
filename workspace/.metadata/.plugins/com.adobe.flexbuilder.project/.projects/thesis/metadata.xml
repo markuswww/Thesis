@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<projectMetadata>
+  <swf bgcolor="ffffff" fullPath="/thesis/bin-debug/thesis.swf" height="100%" pageTitle="" width="100%"/>
+  <generatedHTMLResources/>
+<swf bgcolor="ffffff" fullPath="/thesis/bin-debug/main.swf" height="100%" pageTitle="" width="100%"/>
+<swf bgcolor="ffffff" fullPath="/Thesis/bin-debug/Main.swf" height="100%" pageTitle="" width="100%"/>
+  <swf bgcolor="ffffff" fullPath="/Thesis/bin-debug/ResizableTitleWindowApp.swf" height="800" pageTitle="" width="600"/>
+  <swf bgcolor="ffffff" fullPath="/Thesis/bin-debug/HandlesTest.swf" height="100%" pageTitle="" width="100%"/>
+  <swf bgcolor="ffffff" fullPath="/Thesis/bin-debug/ResizeExample.swf" height="100%" pageTitle="Resize Container Example" width="100%"/>
+  <swf bgcolor="ffffff" fullPath="/Thesis/bin-debug/ResizeContainers.swf" height="400" pageTitle="Resizable Containers" width="570"/>
+</projectMetadata>

@@ -1,0 +1,45 @@
+package markus.ringel.thesis.helper
+{
+	import flash.events.MouseEvent;
+	import mx.containers.Panel;
+	import mx.controls.Button;
+	import mx.managers.CursorManager;
+	public class ResizablePanel extends Panel {
+		[Embed(source="../../../../../assets/imgs/resize_handle.png")] public var resizeIcon:Class;
+		private var resizer:Button;
+		public function ResizablePanel() {
+			super();
+		}
+		override protected function createChildren():void {
+			super.createChildren();
+			if (resizer == null) {
+				resizer = new Button();
+				resizer.width = resizer.height = 14;
+				resizer.setStyle("cornerRadius", 0);
+				resizer.setStyle(“icon”, resizeIcon);
+				rawChildren.addChild(resizer);
+				resizer.addEventListener(MouseEvent.MOUSE_DOWN, resizeDown);
+			}
+		}
+		override protected function updateDisplayList(w:Number, h:Number):void {
+			super.updateDisplayList(w, h);
+			resizer.x = w – resizer.width;
+			resizer.y = h – resizer.height;
+		}
+		private function resizeDown(e:MouseEvent):void {
+			stage.addEventListener(MouseEvent.MOUSE_MOVE, scalePanel);
+			stage.addEventListener(MouseEvent.MOUSE_UP, stopScale);
+		}
+		private function scalePanel(e:MouseEvent):void {
+			if ((stage.mouseX – x) > minWidth
+				&& (stage.mouseX – x) minHeight
+				&& (stage.mouseY – y) < maxHeight) {
+				height = (stage.mouseY – y);
+			}
+		}
+		private function stopScale(e:MouseEvent):void {
+			stage.removeEventListener(MouseEvent.MOUSE_MOVE, scalePanel);
+			stage.removeEventListener(MouseEvent.MOUSE_UP, stopScale);
+		}
+	}
+}

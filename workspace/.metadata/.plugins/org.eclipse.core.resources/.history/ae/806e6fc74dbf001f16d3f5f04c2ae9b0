@@ -1,0 +1,269 @@
+package
+{
+	
+	import flash.events.Event; 
+	import flash.utils.Dictionary;
+	import mx.collections.ArrayCollection;
+	
+	
+	// needed components
+	import mx.containers.Canvas
+    import mx.containers.Box;
+	import mx.controls.Label;
+	
+	// binding watching stuff
+	import mx.binding.utils.ChangeWatcher;
+	import mx.events.FlexEvent;
+	import mx.events.PropertyChangeEvent;
+	
+	// effect stuff
+	import mx.effects.Effect;
+	import mx.effects.Move;
+	import mx.effects.Fade;
+	import mx.events.ResizeEvent;
+	
+	
+	import controller.PostManager;
+	import model.Diff;
+	import model.Post;
+	import view.post.PostContainer;    
+	
+	import mx.controls.Alert;
+	
+	/**
+	 * Thiss class diplays and "animates" the list of posts held by the PostManager
+	 * (the add-, remove- and move-effects are based on the Diffs fetched form the server and managed by the PostManager)
+	 *
+	 */
+	public class PostsBox extends Canvas {
+		
+		// gap between two adjacent posts
+		private const VERTICAL_GAP:int = 10;
+		
+		private var labels:Dictionary = new Dictionary();
+		
+		// area holding the PostContainers
+		private var box:Canvas = new Canvas();
+		
+		// data-binding watcher, watching PostManager.instance.postsList
+		private var changeWatcher:ChangeWatcher;
+		
+		// currently displayed PostContainers
+		private var currentContainers:Dictionary  = new Dictionary();
+		// buffer for PostContainers (in case of resorting, movement, ...)
+		private var pushedContainers:Dictionary  = new Dictionary();
+		
+		private var effects:ArrayCollection = new ArrayCollection();
+		
+		/**
+		 * Constructor
+		 */
+		public function PostsBox() {
+			this.percentWidth=100;
+			this.percentHeight=100;
+			this.addChild(box);
+			
+			//~ box.direction="vertical";
+			box.setStyle("paddingLeft","5");
+			box.setStyle("paddingRight","5");
+			box.setStyle("paddingTop","5");
+			box.setStyle("paddingBottom","5");
+			box.setStyle("verticalGap","10");
+			//~ box.percentHeight=100;
+			box.verticalScrollPolicy = "off";
+			box.horizontalScrollPolicy = "off";
+			box.setStyle("left","20");
+			box.setStyle("right", "5")
+			
+			// TODO 18.12.08 to allow or to disallow vertical scrolling, that is the question...
+			//~ this.verticalScrollPolicy = "off";
+			this.verticalScrollPolicy = "on";
+			this.horizontalScrollPolicy = "off";
+			
+			changeWatcher = ChangeWatcher.watch(PostManager.instance, "diffs", onDiffsChanged); // Use Watcher.unwatch() to remove the watcher.
+		}
+		
+		
+		private function onResizeUpdateContainerPositions(event:ResizeEvent):void
+		{
+			var currentX:int = 0;
+			var currentY:int = 0;
+			
+			// since we have to position all containers we do this in a new for-each instead of using the yOfPosition function
+			for each (var postContainer:PostContainer in currentContainers){
+				if (postContainer != null) 
+				{
+					currentY += VERTICAL_GAP;
+					postContainer.move(currentX, currentY);
+					currentY += postContainer.height;
+				}
+			}
+			
+			// don't forget about the numbers :-)
+			updateNumberLabels();
+		}
+		
+		private function updateNumberLabels():void {
+			var lastYValue:int = -1;
+			for (var index:int = 0; index < PostManager.instance.quantity; index++) 
+			{
+				if (labels[index] == null) 
+				{
+					var label:Label = new Label();
+					this.addChild(label);
+					label.text = index.toString();
+					labels[index] = label;
+				}
+				labels[index].x = 0;
+				labels[index].y = yOfPosition(index);
+				
+				// avoid overlaping labels by setting visibility of subsequent labels on the same position to false
+				labels[index].visible = (labels[index].y != lastYValue) ;
+				
+				lastYValue = labels[index].y;
+			}
+			
+		}
+		
+		
+		/*  CURRENTLY NOT NEEDED
+		public function addPostAt(post:Post, index:int):void {
+		if (postContainers[post.id] == null) {
+		postContainers[post.id] = new PostContainer();
+		}
+		postContainers[post.id].post = post; 
+		box.addChildAt(postContainers[post.id], index);
+		}
+		
+		public function removePostAt(post:Post, index:int):void {
+		}
+		
+		public function movePost(post:Post, from:int, to:int):void {
+		}
+		
+		*/
+		/**
+		 * called as soon as thera are changes in PostManager.instace.diffs
+		 *
+		 * this function creates, deletes and moves Post(Containers) according to these diffs
+		 */
+		private function onDiffsChanged(event:Event):void {
+			effects.removeAll();
+			var newEffect:Effect;
+			
+			var currentDiff:Diff;
+			for each (currentDiff in PostManager.instance.diffs) 
+			{
+				
+				/* NOTE similar handling of ciffs located in controllers.PostManager.onGetPostsDiff() */
+				
+				/**
+				 * either currentDiff.from _or_ currentDiff.to can be -1
+				 * (both -1 would represent an object wich has not been in the list (from = -1) 
+				 * and should be move out of the list (to = -1)
+				 * also from != to is assured (from the service)
+				 */
+				
+				if (currentDiff.from == -1) { // add post at position
+					var newContainer:PostContainer = new PostContainer();
+					box.addChild(newContainer);
+					newContainer.post = Post(currentDiff.object);
+					newContainer.alpha = 0.3;
+					newContainer.y = yOfPosition(currentDiff.to);
+					newContainer.addEventListener(ResizeEvent.RESIZE, onResizeUpdateContainerPositions);
+					newEffect = new Fade(newContainer);
+					Fade(newEffect).alphaFrom = 0;
+					Fade(newEffect).alphaTo = 1;
+					newEffect.startDelay=500;
+					newEffect.duration=1000;
+					effects.addItem(newEffect);
+					
+					if (currentContainers[currentDiff.to] == null) {
+						currentContainers[currentDiff.to] = newContainer;
+					} else {
+						pushedContainers[currentDiff.to] = currentContainers[currentDiff.to];
+						currentContainers[currentDiff.to] = newContainer;
+					}
+				} else if (currentDiff.to == -1) { // remove post from position
+					if (pushedContainers[currentDiff.from] != null) {
+						box.removeChild(pushedContainers[currentDiff.from]);
+						pushedContainers[currentDiff.from] = null;
+					} else {
+						box.removeChild(currentContainers[currentDiff.from]);
+						currentContainers[currentDiff.from] = null;
+					}
+				} else { // movement of a post in the list
+					// fist move occupying post aside
+					if (pushedContainers[currentDiff.to] == null) {
+						pushedContainers[currentDiff.to] = currentContainers[currentDiff.to];
+					} else {
+						//hmm, what then!? -> should never happen... hopefully
+					}
+					// then move in new post (which in turn may have been pushed aside)
+					if (pushedContainers[currentDiff.from] == null) { // none pushed aside -> take the normal one
+						currentContainers[currentDiff.to] = currentContainers[currentDiff.from];
+						newEffect = new Move(currentContainers[currentDiff.from]);
+						currentContainers[currentDiff.from] = null;
+					} else {
+						currentContainers[currentDiff.to] = pushedContainers[currentDiff.from];
+						newEffect = new Move(pushedContainers[currentDiff.from]);
+						pushedContainers[currentDiff.from] = null;
+					}
+					Move(newEffect).yTo = yOfPosition(currentDiff.to);
+					newEffect.duration=2000;
+					effects.addItem(newEffect);
+					
+					// fill eventually created gap in currentContainers
+					if (
+						(currentContainers[currentDiff.from] == null) && 
+						(pushedContainers[currentDiff.from] != null)
+					) 
+					{
+						currentContainers[currentDiff.from] = pushedContainers[currentDiff.from];
+					}
+					
+				}
+				
+				
+				updateNumberLabels(); 
+				
+				// TODO: 18.12.08: find out where these null-containers in currentContainers come from :-S
+				// re-add containers to repair tabbing order                
+				for each (var container:PostContainer in currentContainers) {
+					if (container != null) {
+						box.removeChild(container);
+						box.addChild(container);
+					}
+				}
+				
+				// trigger all the newly created effects (Fade and Move)
+				for each (var effect:Effect in effects) 
+				{
+					effect.play();
+				}
+				
+				
+			}
+		}
+		
+		/**
+		 * this helper function calculates the y-position (in pixels) of a given ranking-place
+		 */
+		private function yOfPosition(position:int):int {
+			
+			var returnValue:int = VERTICAL_GAP;
+			var index:int = 0;
+			while (index < position) {
+				if (currentContainers[index] is PostContainer) {
+					returnValue += currentContainers[index].height;
+					returnValue += VERTICAL_GAP;
+				}
+				index++;
+			}
+			return returnValue;
+		}
+		
+		
+		
+	}
+}

@@ -1,0 +1,9 @@
+package markus.ringel.thesis.src.view.post
+{
+	public class PostBox
+	{
+		public function PostBox()
+		{
+		}
+	}
+}

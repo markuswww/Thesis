@@ -1,0 +1,9 @@
+package
+{
+	public class PostBox
+	{
+		public function PostBox()
+		{
+		}
+	}
+}

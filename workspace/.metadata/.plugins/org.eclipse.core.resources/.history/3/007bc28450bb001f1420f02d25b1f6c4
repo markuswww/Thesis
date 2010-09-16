@@ -1,0 +1,14 @@
+
+        package sampleBalsamiqClient
+        {
+        import mx.collections.ArrayCollection;
+
+        public class MockupSampleModel
+        {
+        
+              [Bindable]
+              public var listProvider0:ArrayCollection;
+            
+        }
+        }
+      

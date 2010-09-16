@@ -1,0 +1,9 @@
+package markus.ringel.thesis.helper
+{
+	public class ResizableTitleWindow
+	{
+		public function ResizableTitleWindow()
+		{
+		}
+	}
+}

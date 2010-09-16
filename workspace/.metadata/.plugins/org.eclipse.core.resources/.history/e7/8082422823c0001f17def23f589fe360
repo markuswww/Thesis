@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" 
+               xmlns:s="library://ns.adobe.com/flex/spark" width="500" height="300" viewSourceURL="srcview/index.html">
+    <fx:Script>
+        <![CDATA[
+            
+            import mx.core.IFlexDisplayObject;
+            import mx.managers.PopUpManager;
+            
+            public var count:Number = 0;
+            
+            public function createPopUp():void
+            {
+                var rtw:ResizableTitleWindow = new ResizableTitleWindow();
+                
+                rtw.title="This is pop up " + count;
+                rtw.height = 100;
+                rtw.width = 170;
+                rtw.x = 50;
+                rtw.y = 10;
+                count++;
+                
+                var st:Label = new Label();
+                st.text = "This ResizableTitleWindow can be dragged, activated, closed, and resized.";
+                st.top = st.left = st.right = st.bottom = 10;
+                
+           
+                rtw.addElement(st);
+                rtw.setStyle("skinClass", ResizableTitleWindowSkin);
+                //PopUpManager.addPopUp(rtw, this, false);
+				this.addChild(rtw);
+            }
+            
+           
+        ]]>
+    </fx:Script>
+    <s:layout>
+        <s:VerticalLayout paddingTop="10" horizontalAlign="center"/>
+    </s:layout>
+    
+    <s:Label text="ResizableTitleWindow" fontSize="16" fontWeight="bold"  />
+    <s:Button label="Create Resizable TitleWindow" click="createPopUp();" />
+</s:Application>

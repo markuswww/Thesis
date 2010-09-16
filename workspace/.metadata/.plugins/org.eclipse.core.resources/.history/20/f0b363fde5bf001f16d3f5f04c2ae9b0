@@ -1,0 +1,18 @@
+package post
+{
+	import spark.components.Panel;
+	
+	public class PostContainer extends Panel
+	{
+		
+		private var postBox:PostBox=new PostBox();
+		
+		public function PostContainer()
+		{
+			super();
+			this.title="Meldungen";
+			this.
+			this.addElement(postBox);
+		}
+	}
+}

@@ -1,0 +1,15 @@
+package markus.ringel.thesis.src.view.post
+{
+	import spark.components.Panel;
+	
+	public class PostContainer extends Panel
+	{
+		public function PostContainer()
+		{
+			super();
+			this.title="Meldungen";
+			this.percentWidth=100;
+			this.percentHeight=100;
+		}
+	}
+}

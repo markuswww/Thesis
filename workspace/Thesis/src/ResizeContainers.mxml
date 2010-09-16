@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:fx="http://ns.adobe.com/mxml/2009" 
+				xmlns:s="library://ns.adobe.com/flex/spark" 
+				xmlns:mx="library://ns.adobe.com/flex/mx" minWidth="955" minHeight="600"
+				xmlns:resize="flex.utils.ui.resize.*"
+				layout="absolute" width="570" height="400" pageTitle="Resizable Containers" viewSourceURL="srcview/index.html">
+	<!-- backgroundGradientColors="[0x000000,0x323232]" backgroundColor="#323232" -->
+
+
+	
+	
+	<mx:TabNavigator x="30" y="5" width="889" height="565" id="switcher">
+		<s:NavigatorContent label="View" width="100%" height="100%">
+			
+	
+			<resize:ResizableWindow id="window" x="15" y="190" width="270" height="175" 
+									movable="{true}" resizable="{true}" 
+									title="ResizableWindow" status="Movable too" showCloseButton="false" 
+									bringToFrontOnMove="true" bringToFrontOnResize="true" 
+									verticalScrollPolicy="off" horizontalScrollPolicy="off"
+									moveHandleColor="#ffffff" resizeHandleColor="#ffffff" verticalGap="2">
+			</resize:ResizableWindow>
+			
+			
+			
+		</s:NavigatorContent>
+		<s:NavigatorContent label="Detail" width="100%" height="100%">
+		</s:NavigatorContent>
+	</mx:TabNavigator>
+
+	
+		
+</mx:Application>

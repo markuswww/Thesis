@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:fx="http://ns.adobe.com/mxml/2009" 
+				xmlns:s="library://ns.adobe.com/flex/spark" 
+				xmlns:mx="library://ns.adobe.com/flex/mx" minWidth="955" minHeight="600"
+				xmlns:resize="flex.utils.ui.resize.*"
+	layout="absolute" width="570" height="400" pageTitle="Resizable Containers" viewSourceURL="srcview/index.html">
+	<!-- backgroundGradientColors="[0x000000,0x323232]" backgroundColor="#323232" -->
+
+	<!-- Blog Entry: http://flexdevtips.blogspot.com/2009/03/resizable-containers.html -->
+
+	<s:Style>
+		/* Example of how to style the resize handle. */
+		ResizableBox {
+			resizeHandleColor: #00ff00;
+			resizeHandleAlpha: 1;
+			backgroundColor: #ddffdd;
+			backgroundAlpha: 0.3;
+			borderThickness: 1;
+			borderStyle: solid;
+			borderColor: #000000;
+			color: #ffffff;
+		}
+		
+		ResizablePanel, ResizableWindow {
+			title-style-name: "title";	
+		}
+		
+		.title {
+			color: #ffffff;
+			font-weight: bold;			
+		}
+		
+	</s:Style>
+		
+	<resize:ResizablePanel id="panel" x="10" y="10" width="150" height="80" bringToFrontOnResize="true" 
+		title="ResizablePanel" layout="horizontal" horizontalGap="0" minWidth="115" minHeight="65" resizeHandleColor="#ffffff">
+		<mx:Label text="{panel.width.toString()}"/>
+		<mx:Label text="x"/>
+		<mx:Label text="{panel.height.toString()}"/>
+	</resize:ResizablePanel>
+	
+	
+	
+	
+	
+	<mx:TabNavigator x="30" y="5" width="889" height="565" id="switcher">
+		
+		<s:NavigatorContent label="View" width="100%" height="100%">
+			
+			
+			
+			
+		</s:NavigatorContent>
+		<s:NavigatorContent label="Detail" width="100%" height="100%">
+		</s:NavigatorContent>
+	</mx:TabNavigator>
+
+	<resize:ResizableWindow id="window" x="15" y="190" width="270" height="175" 
+		movable="{true}" resizable="{true}" 
+		title="ResizableWindow" status="Movable too" showCloseButton="false" 
+		bringToFrontOnMove="true" bringToFrontOnResize="true" 
+		verticalScrollPolicy="off" horizontalScrollPolicy="off"
+		moveHandleColor="#ffffff" resizeHandleColor="#ffffff" verticalGap="2">
+	</resize:ResizableWindow>
+		
+</mx:Application>

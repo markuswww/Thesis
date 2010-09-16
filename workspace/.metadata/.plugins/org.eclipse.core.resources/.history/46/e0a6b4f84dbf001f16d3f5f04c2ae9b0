@@ -1,0 +1,17 @@
+package markus.ringel.thesis.src.view.post
+{
+	import spark.components.Panel;
+	
+	public class PostContainer extends Panel
+	{
+		
+		private var postBox:PostBox=new PostBox();
+		
+		public function PostContainer()
+		{
+			super();
+			this.title="Meldungen";
+			this.addChild(post
+		}
+	}
+}

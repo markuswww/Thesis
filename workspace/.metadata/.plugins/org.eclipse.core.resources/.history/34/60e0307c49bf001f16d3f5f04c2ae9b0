@@ -1,0 +1,12 @@
+package markus.ringel.thesis.src.view
+{
+	import spark.components.Panel;
+	
+	public class PostContainer extends Panel
+	{
+		public function PostContainer()
+		{
+			super();
+		}
+	}
+}
