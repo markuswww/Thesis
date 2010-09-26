@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Skin xmlns:fx="http://ns.adobe.com/mxml/2009"
+		xmlns:s="library://ns.adobe.com/flex/spark"
+		xmlns:fb="http://ns.adobe.com/flashbuilder/2009"
+		alpha.disabled="0.5"
+		height.help="{height+105}">
+	
+	<fx:Metadata>
+		[HostComponent("probe.CustomPanel")]
+	</fx:Metadata>
+	
+	<s:states>
+		<s:State name="normal"/>
+		<s:State name="help"/>
+		<s:State name="disabled"/>
+	</s:states>
+	
+	<!-- Hintergrund -->
+	<s:Rect id="background" left="0" top="0" right="0" bottom="0"
+			radiusX="{getStyle('cornerRadius')}"
+			radiusY="{getStyle('cornerRadius')}">
+		<s:filters>
+			<s:DropShadowFilter blurX="40" blurY="40"
+								color="#000000" distance="0" alpha="0.6" />
+			<s:DropShadowFilter blurX="10" blurY="10"
+								color="#000000" distance="0" strength="1.2" />
+		</s:filters>
+		<s:fill>
+			<s:SolidColor color="#cbcbcb" />
+			<!--s:LinearGradient rotation="45">
+				<s:entries>
+					<s:GradientEntry id="firstGradientColor"
+									 color="{getStyle('firstGradientColor')}" ratio="0" />
+					<s:GradientEntry id="secondGradientColor"
+									 color="{getStyle('secondGradientColor')}" ratio="1" />
+				</s:entries>
+			</s:LinearGradient-->
+		</s:fill>
+	</s:Rect>
+	
+	<!-- Titel -->
+	<s:Rect height="28" left="25" right="60" top="26">
+		<s:fill>
+			<s:SolidColor color="#009EE0" />
+		</s:fill>
+	</s:Rect>
+	<s:RichText left="30" top="32" fontSize="20"
+				text="// {hostComponent.title}" />
+	
+	<!-- Hilfe Button -->
+	<s:Button id="helpButton" label="?"
+			  width="30" height="30" top="25" right="25" />
+	
+	<!-- Content -->
+	<s:Group id="contentGroup"
+			 left="25" right="25" top="80" bottom="25" bottom.help="130"
+			 minWidth="0" minHeight="0">
+		<s:layout>
+			<s:VerticalLayout />
+		</s:layout>
+		
+		<!-- Hier wird der eigentliche Inhalt platziert -->
+	</s:Group>
+	<!-- Hilfe -->
+	<s:BorderContainer id="helpContentContainer" includeIn="help"
+					   borderVisible="false" backgroundColor="#222222"
+					   height="100" left="0" right="0" bottom="25">
+		<s:Label color="#009EE0" fontSize="60"
+				 text="?" left="25" top="25" />
+		<s:RichText text="{hostComponent.helpContent}"
+					left="80" right="25" top="25" bottom="25" lineBreak="toFit"
+					/>
+	</s:BorderContainer>
+</s:Skin>

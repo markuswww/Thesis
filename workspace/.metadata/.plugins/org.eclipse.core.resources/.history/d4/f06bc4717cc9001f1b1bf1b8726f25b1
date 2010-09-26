@@ -1,0 +1,15 @@
+package markus.ringel.thesis.model
+{
+	import mx.collections.ArrayCollection;
+
+	[Bindable]
+	public class Pif
+	{
+		
+		private var _feedList:ArrayCollection=new ArrayCollection();
+		private var _friendList:ArrayCollection=new ArrayCollection();
+		public function Pif()
+		{
+		}
+	}
+}

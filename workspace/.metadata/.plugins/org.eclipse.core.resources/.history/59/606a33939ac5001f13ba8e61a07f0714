@@ -1,0 +1,41 @@
+
+	import com.adobe.protocols.dict.events.ErrorEvent;
+	import com.adobe.xml.syndication.generic.FeedFactory;
+	import com.adobe.xml.syndication.generic.IFeed;
+	
+	import mx.collections.ArrayCollection;
+	import mx.controls.Alert;
+	import mx.rpc.events.FaultEvent;
+	import mx.rpc.events.ResultEvent;
+	import mx.rpc.http.HTTPService;
+	
+	private static const FEED_URL:String = "http://rss.adobe.com/en/resources_flex.rss";
+	[Bindable] private var items:ArrayCollection = null;
+	
+	private function testFeed():void
+	{
+		var service:HTTPService = new HTTPService();
+		service.addEventListener(ResultEvent.RESULT, feedResult);
+		service.addEventListener(FaultEvent.FAULT, onError);
+		service.resultFormat = "e4x";
+		service.url = FEED_URL;
+		service.send();
+	}
+	
+	private function feedResult(event:ResultEvent):void 
+	{
+		var feedResult:XML = new XML(event.result);
+		var RSSFeed:IFeed = FeedFactory.getFeedByXML(feedResult);
+		items = new ArrayCollection(RSSFeed.items);
+	}
+	
+	private function onError(e:FaultEvent):void
+	{
+		writeOutput("Error : " + e.text);
+	}
+	
+	private function writeOutput(data:String):void
+	{
+		outputField.text += data + "\n";
+	}
+	

@@ -1,0 +1,49 @@
+package probe2
+{
+	import flash.events.MouseEvent;
+	import flash.net.URLRequest;
+	import flash.net.navigateToURL;
+	import mx.core.IVisualElementContainer;
+	import mx.events.FlexEvent;
+	import mx.controls.LinkButton;
+	import spark.components.SkinnableContainer;
+	
+	public class PostBox extends SkinnableContainer
+	{
+		
+		
+		public function PostBox()
+		{
+			super();
+		}
+	
+		[Bindable] public var _title:String;
+		[Bindable] public var _url:String;
+		[Bindable] public var linkButton:LinkButton;
+	
+		override protected function partAdded(
+			partName:String, instance:Object):void {
+			super.partAdded(partName, instance);
+			if (instance==linkButton) {
+				linkButton.addEventListener(
+					MouseEvent.CLICK, onHelpButton_click);
+			}
+			
+		
+		}
+		override protected function partRemoved(
+			partName:String, instance:Object):void {
+			super.partRemoved(partName, instance);
+			
+			if (instance==linkButton) {
+				linkButton.removeEventListener(
+					MouseEvent.CLICK, onHelpButton_click);
+			}
+			
+		}
+		
+		protected function onHelpButton_click(event:MouseEvent):void {
+			navigateToURL(new URLRequest(_title),'_blank');
+		}
+	}
+}

@@ -1,0 +1,10 @@
+package probe2
+{
+	public class TagBox extends SkinnableContainer
+	{
+		public function TagBox()
+		{
+			super()
+		}
+	}
+}

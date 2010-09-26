@@ -1,0 +1,9 @@
+package probe2
+{
+	public class PostContainer
+	{
+		public function PostContainer()
+		{
+		}
+	}
+}

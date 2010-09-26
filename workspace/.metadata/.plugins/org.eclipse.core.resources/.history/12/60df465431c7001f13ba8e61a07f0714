@@ -1,0 +1,26 @@
+/* CSS file */
+@namespace s "library://ns.adobe.com/flex/spark";
+@namespace mx "library://ns.adobe.com/flex/mx";
+global {
+focus-color: #009EE0;
+}
+s|RichText {
+color: #FFFFFF;
+}
+s|Button:over {
+chrome-color: #009EE0;
+}
+.advancedCustomPanel {
+skinClass: ClassReference("probe.SimpleSkin");
+}
+.styledPanel {
+cornerRadius: 32;
+firstGradientColor: #cbcbcb;
+secondGradientColor: #efefef;
+skinClass: ClassReference("probe.SimpleSkin");
+}
+
+.PostPanel {
+	cornerRadius: 5;
+	skinClass: ClassReference("probe2.PostSkin");
+}

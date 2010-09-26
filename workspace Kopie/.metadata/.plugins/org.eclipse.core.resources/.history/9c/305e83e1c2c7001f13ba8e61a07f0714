@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009"
+			   xmlns:s="library://ns.adobe.com/flex/spark"
+			   xmlns:mx="library://ns.adobe.com/flex/mx"
+			   xmlns:components="probe2.*" 
+			   creationComplete="onInit();">
+	
+	<fx:Style>
+		@namespace local "probe2.*";
+		
+		local|PostBox
+		{
+			skinClass: ClassReference("probe2.PostSkin");
+		}
+	</fx:Style>
+	
+	<s:layout>
+		<s:VerticalLayout gap="2" paddingLeft="50" paddingTop="50" />
+	</s:layout>
+	
+	<fx:Script>
+		<![CDATA[
+			import mx.collections.ArrayCollection;
+			
+			import probe2.PostBox;
+			import markus.ringel.thesis.model.Post;
+			
+			//var postManager:PostManager=PostManager.getInstance();
+			//var postManager:PostManager=new PostManager();
+			//var posts:ArrayCollection=postManager.getPostList();
+			public  var allPosts:ArrayCollection;
+			
+			public  function createPostList():void{
+				var url:Array=["http://www.youtube.com/","http://www.sportschau.de/sp/","http://www.spiegel.de/",
+					"http://www.spiegel.de/sport/","http://www.spiegel.de/netzwelt/","http://www.spiegel.de/wissenschaft/"
+					,"http://www.spiegel.de/unispiegel/","http://www.mactechnews.de/news/index.html","http://www.golem.de/","http://www.twitter.com",
+					"http://www.bild.de/","http://www.heise.de/","http://www.heise.de/tr/","http://www.heise.de/mobil/","http://www.heise.de/security/",
+					"http://www.heise.de/netze/","http://www.heise.de/open/","http://www.heise.de/developer/"];	
+				
+				for(var i:int=0;i<url.length;i++){
+					var p:Post=new Post();
+					p.color="#FFFFFF";
+					p.postRating=1.0;
+					p.seen=false;
+					p.sourceRating=1.0;
+					p.sourceRatingOverridden=false;
+					p.summary="ich bin eine zusammenfassung und schreibe vor mir her, wenn ich keine waere wuerde ich jawohl nicht hier stehen oder etwa doch.";
+					p.title="Ich bin der Title des Post nr " +i +". Ich bin durchnummeriert.";
+					p.uri=url[i];
+					p.id=i;
+					allPosts.addItem(p);
+				}
+			}
+			
+			public function onInit():void{	
+				createPostList()
+				
+				for (var i:int=1; i<=10;i++){
+					var p:PostBox=new PostBox();
+					p._title="Das ist Post " +i;
+					p._url="http://www.mactechnews.de/news/index/Blizzard-aktualisiert-StarCraft-II-Wings-of-Liberty-147846.html";
+					view.addElement(p);
+				}
+			}
+		]]>
+	</fx:Script>
+	 
+	<mx:TabNavigator x="30" y="5" width="100%" height="100%" id="switcher">
+		<s:NavigatorContent id="view" label="View" width="100%" height="100%">
+			
+			<s:layout>
+				<s:VerticalLayout gap="1" />
+
+			</s:layout>
+			<!--components:PostBox id="post1" styleName="PostPanel" backgroundColor="#CCCCCC" 
+								_title="Hier steht eine beteutende Nachricht"
+								_url="http://www.mactechnews.de/news/index/Auswirkungen-der-entschaften-Entwickler-Richtlinien-Mehr-iOS-Apps-werden-zugelassen-147808.html">
+			</components:PostBox>
+			
+			<components:PostBox id="post2" styleName="PostPanel" backgroundColor="#CCCCCC" 
+								_title="Hier steht eine beteutende Nachricht"
+								_url="http://www.mactechnews.de/news/index/Auswirkungen-der-entschaften-Entwickler-Richtlinien-Mehr-iOS-Apps-werden-zugelassen-147808.html"
+								click="onInit();"
+								>
+			</components:PostBox>
+			<components:PostBox id="post3" styleName="PostPanel" backgroundColor="#CCCCCC" 
+								_title="Hier steht eine beteutende Nachricht"
+								_url="http://www.mactechnews.de/news/index/Auswirkungen-der-entschaften-Entwickler-Richtlinien-Mehr-iOS-Apps-werden-zugelassen-147808.html">
+				
+			</components:PostBox>
+			<components:PostBox id="post4" styleName="PostPanel" backgroundColor="#CCCCCC" 
+								_title="Hier steht eine beteutende Nachricht"
+								_url="http://www.mactechnews.de/news/index/Auswirkungen-der-entschaften-Entwickler-Richtlinien-Mehr-iOS-Apps-werden-zugelassen-147808.html"
+								click="onInit();"
+								>
+			</components:PostBox-->
+			
+		</s:NavigatorContent>
+		<s:NavigatorContent label="Detail" width="100%" height="100%">
+		</s:NavigatorContent>
+	</mx:TabNavigator>
+	
+</s:Application>

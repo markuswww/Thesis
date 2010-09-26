@@ -1,0 +1,9 @@
+package markus.ringel.thesis.model
+{
+	public class Pif
+	{
+		public function Pif()
+		{
+		}
+	}
+}

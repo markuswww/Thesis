@@ -1,0 +1,9 @@
+package
+{
+	public class PostContainer
+	{
+		public function PostContainer()
+		{
+		}
+	}
+}

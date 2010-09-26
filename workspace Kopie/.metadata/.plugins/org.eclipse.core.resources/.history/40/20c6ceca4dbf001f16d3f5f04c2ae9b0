@@ -1,0 +1,333 @@
+package
+{
+	import flash.events.Event;
+	import flash.events.MouseEvent;
+	import flash.events.KeyboardEvent;
+	import mx.utils.ObjectUtil;
+	
+	/* for opening URLs in new Tabs */
+	import flash.net.navigateToURL;
+	import flash.net.URLRequest;
+	
+	import mx.containers.Canvas;
+	import mx.controls.Button;
+	import mx.controls.LinkButton;
+	import mx.controls.Label;
+	import mx.controls.TextArea;
+	
+	import mx.effects.Resize;
+	import mx.events.FlexEvent;
+	
+	// drawing stuff
+	import mx.core.UIComponent;
+	import flash.display.Graphics;
+	import flash.display.Sprite;
+	import flash.geom.Rectangle;
+	import mx.graphics.SolidColor;
+	import mx.graphics.LinearGradient;
+	import mx.graphics.RadialGradient;
+	import mx.graphics.GradientEntry;
+	
+	// to acces the application object and aquire control over the sidebar
+	import mx.core.Application;
+	
+	import controller.PostManager;
+	import model.Feed;
+	import model.Post;
+	import utilities.AssetManager;
+	import view.components.drawing.Color;
+	import view.components.OrbButton;
+	import view.components.PieMenuButton;
+	import view.components.PieMenuButtonItem;
+	
+	public class PostContainer extends Canvas
+	{
+		private var canvas:Sprite = new Sprite();
+		private var canvasObj:UIComponent = new UIComponent();
+		
+		private var btnMenu:PieMenuButton = new PieMenuButton();
+		private var btnAddToNewspaper:PieMenuButtonItem = new PieMenuButtonItem();
+		private var btnRateGood:PieMenuButtonItem = new PieMenuButtonItem();
+		private var btnRateNeutral:PieMenuButtonItem = new PieMenuButtonItem();
+		private var btnRateBad:PieMenuButtonItem = new PieMenuButtonItem();
+		private var btnInfo:PieMenuButtonItem = new PieMenuButtonItem();
+		
+		private var btnMinMax:OrbButton = new OrbButton();
+		private var btnTitle:LinkButton = new LinkButton();
+		private var taSummary:TextArea = new TextArea();
+		
+		private var effResize:Resize = new Resize();        
+		private var heightMinimized:int=28;
+		private var heightMaximized:int=100;
+		private var isMinimized:Boolean = true;
+		
+		//constructor
+		public override function PostContainer()
+		{
+			super();
+			this.percentWidth = 100;
+			this.height = heightMinimized;
+			
+			this.horizontalScrollPolicy = "off";
+			this.verticalScrollPolicy = "off";
+			
+			this.clipContent = false;
+			
+			
+			btnInfo.icon = AssetManager.info;
+			btnAddToNewspaper.icon = AssetManager.newspaper;
+			btnRateGood.icon = AssetManager.rateGood;
+			btnRateNeutral.icon = AssetManager.rateNeutral;
+			btnRateBad.icon = AssetManager.rateBad;
+			
+			taSummary.editable = false;
+			
+			btnMinMax.tabEnabled=false;
+			
+			//add event listener for click event and call method
+			btnMinMax.addEventListener(MouseEvent.CLICK, onClick_MaximizePanel);
+			btnTitle.addEventListener(MouseEvent.CLICK, onClick_OpenURL);
+			btnInfo.addEventListener(MouseEvent.MOUSE_UP, onClick_InfoButton);
+			btnAddToNewspaper.addEventListener(MouseEvent.MOUSE_UP, onClick_AddToNewspaperButton);
+			btnRateGood.addEventListener(MouseEvent.MOUSE_UP, onClick_RateGoodButton);
+			btnRateNeutral.addEventListener(MouseEvent.MOUSE_UP, onClick_RateNeutralButton);
+			btnRateBad.addEventListener(MouseEvent.MOUSE_UP, onClick_RateBadButton);
+			
+			btnTitle.addEventListener(KeyboardEvent.KEY_DOWN, onKeyDown);
+			
+			btnMenu.angleGap = 3;
+			btnMenu.menuThickness = 20;
+			btnMenu.items = [ btnAddToNewspaper, btnRateBad, btnRateNeutral, btnRateGood, btnInfo ]; // clockwise
+			
+			canvasObj.addChild(canvas);
+			this.addChild(canvasObj);
+			
+			this.addChild(btnTitle);
+			this.addChild(taSummary);
+			this.addChild(btnMinMax);
+			this.addChild(btnMenu);
+			
+		}
+		
+		
+		
+		/* Sets the size and postition of each child of the container.
+		*/
+		protected override function updateDisplayList(unscaledWidth:Number, unscaledHeight:Number):void{
+			super.updateDisplayList(unscaledWidth, unscaledHeight);
+			
+			doLayout();
+			redraw();
+		}
+		
+		private function doLayout():void {
+			//gap between label and edges of button
+			var margin:int = 4;
+			//set the button size + margin
+			btnMenu.height=16+margin;
+			btnMenu.width=28+margin;
+			btnMinMax.height=16+margin;
+			btnMinMax.width=28+margin;
+			var pixelsRight:int = 10;
+			var pixelsTop:int = 4;
+			//define var to width of button
+			var buttonWidth:int = btnMinMax.width;
+			//set x and y properties to be used for positioning of button
+			var x:Number = this.width - buttonWidth - pixelsRight;
+			var y:Number = pixelsTop;
+			//position the buttons on the canvas (from right to left!)
+			btnMinMax.move(x, y);
+			x = x - buttonWidth;
+			btnMenu.move(x,y);
+			
+			btnTitle.move(pixelsTop,pixelsTop);
+			btnTitle.label = _post.title;
+			btnTitle.setActualSize(
+				(this.width - 2*buttonWidth - 3 * pixelsRight), 
+				16+margin
+			);
+			btnTitle.setStyle("textAlign", "left");
+			btnTitle.label = _post.title;
+			
+			
+			taSummary.move(pixelsRight, heightMinimized);
+			var taSummaryHeight:Number = 0;
+			
+			if (_post.summary == ("")) {
+				btnMinMax.enabled = false;  // disable the minMax button if there is no summary (= empty summary)
+				taSummary.visible = false;
+			} else {
+				btnMinMax.enabled = true;
+				if (isMinimized) {
+					btnMinMax.icon = AssetManager.unfold;
+				} else {
+					btnMinMax.icon = AssetManager.fold;
+				}
+				taSummary.text = _post.summary;
+				
+				taSummaryHeight = (this.height - heightMinimized - 2*pixelsTop)
+				taSummary.visible = (taSummaryHeight > 0);
+			}
+			taSummary.setActualSize((this.width - 2*pixelsRight), taSummaryHeight);
+			
+		}
+		
+		private function redraw():void {
+			
+			var grob:Graphics;
+			var color:Color;
+			var fillLinear:LinearGradient;
+			var linear1:GradientEntry;
+			var linear2:GradientEntry;
+			
+			grob = canvas.graphics;
+			grob.clear();
+			
+			fillLinear = new LinearGradient();
+			//~ linear1 = new GradientEntry(_post.color as Number, -1 , 1.0);
+			color = Color.fromString(_post.color);
+			linear1 = new GradientEntry(color.toUint(), -1 , 1.0);
+			linear2 = new GradientEntry(0xFFFFFF, -1 , 1.0);
+			fillLinear.entries = [ linear1, linear2 ];
+			fillLinear.angle = -90;
+			fillLinear.begin(grob, new Rectangle(0, 0, this.width, this.height));
+			grob.drawRoundRect(0,0,this.width, this.height, 10);
+			fillLinear.end(grob);
+		}
+		
+		/* aint so good... messes up the transparency of the pie menu :-S        
+		import mx.effects.Glow;
+		import mx.effects.Parallel;
+		private var parallel:Parallel = null;
+		public function toggleHighlight(isHighlighted:Boolean):void {
+		if (parallel == null) {
+		parallel = new Parallel(this);
+		var glow:Glow = new Glow();
+		glow.alphaFrom = 0;
+		glow.alphaTo = 1;
+		glow.color = _post.color as uint;
+		parallel.addChild(glow);                
+		}
+		if (isHighlighted) {
+		parallel.play();
+		} else {
+		parallel.play(null, true); // reverse
+		}
+		}
+		*/
+		
+		/* ================================================================================================
+		* EVENT HANDLER
+		* ================================================================================================ */
+		
+		private function onClick_OpenURL(e:MouseEvent):void{
+			if (_post.uri) {
+				var urlRequest:URLRequest = new URLRequest(_post.uri.toString());
+				navigateToURL(urlRequest, "_blank");
+				
+				btnMenu.showMenu();
+				//                toggleHighlight(true);
+			}
+		}
+		
+		private function onClick_InfoButton(e:MouseEvent):void{
+			Application.application.sidebar.showPostEditor(_post);
+		}
+		
+		private function onClick_AddToNewspaperButton(e:MouseEvent):void{
+			// TODO            
+		}
+		
+		private function onClick_RateGoodButton(e:MouseEvent):void{
+			PostManager.instance.ratePostGood(_post.id);
+			btnMenu.icon = AssetManager.rateGood;
+		}
+		
+		private function onClick_RateNeutralButton(e:MouseEvent):void{
+			PostManager.instance.ratePostNeutral(_post.id);
+			btnMenu.icon = AssetManager.rateNeutral;
+		}
+		
+		private function onClick_RateBadButton(e:MouseEvent):void{
+			PostManager.instance.ratePostBad(_post.id);
+			btnMenu.icon = AssetManager.rateBad;
+		}
+		
+		private function onClick_MinimizePanel(e:MouseEvent):void{
+			isMinimized=true;
+			effResize.stop();
+			btnMinMax.removeEventListener(MouseEvent.CLICK, onClick_MinimizePanel);
+			btnMinMax.addEventListener(MouseEvent.CLICK, onClick_MaximizePanel);
+			effResize.heightFrom = height;
+			effResize.heightTo = heightMinimized;
+			effResize.play([this]);
+		}
+		
+		private function onClick_MaximizePanel(e:MouseEvent):void{
+			isMinimized=false;
+			effResize.stop();
+			btnMinMax.removeEventListener(MouseEvent.CLICK, onClick_MaximizePanel);
+			btnMinMax.addEventListener(MouseEvent.CLICK, onClick_MinimizePanel);
+			effResize.heightFrom = height;
+			effResize.heightTo = heightMaximized;
+			effResize.play([this]);
+		}
+		
+		private function onKeyDown(event:KeyboardEvent):void {
+			switch (event.keyCode) {
+				// the keys are selected by position on the keyboard, not by letter:
+				// they form a circle around the key 'j' -> easy to find, and only uses right hand fingers -> left hand still free to use the tabulator key
+				case 85: // u
+					onClick_RateGoodButton(null);
+					break;
+				case 72: // h
+					onClick_RateNeutralButton(null);
+					break;
+				case 78: // n
+					onClick_RateBadButton(null);
+					break;
+				case 77: // m
+					onClick_AddToNewspaperButton(null);
+					break;
+				case 73: // i
+					onClick_InfoButton(null);
+					break;
+				default:
+					// do nothing :-)
+			}
+		}
+		
+		/* ================================================================================================
+		* PROPERTIES
+		* ================================================================================================ */
+		
+		private var _post:Post = new Post();
+		public function set post (newPost:Post):void
+		{
+			this._post = newPost;
+			
+			// TODO: tooltip won't show on child... don't know why :-(            
+			//~ btnInfo.toolTip = 
+			//~ "ID = " + _post.id + "\n" +
+			//~ "post rating = " + _post.postRating + "\n" +
+			//~ "source rating = " + _post.sourceRating + "\n" +
+			//~ "timestamp = " + _post.timestamp + "\n" +
+			//~ "seen = " + _post.seen + "\n" +
+			//~ "color = " + _post.color + "\n" +
+			//~ "feed is Feed? = " + (_post.feed is Feed) + "\n" + //ObjectUtil.toString(_post.feed);
+			//~ "feed.id = " + _post.feed.id +
+			//~ "";
+			
+			//~ btnMenu.toolTip = btnInfo.toolTip;
+		}
+		public function get post():Post
+		{
+			return _post;
+		}
+		
+		
+		
+		
+	}
+	
+}

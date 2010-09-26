@@ -1,0 +1,30 @@
+package markus.ringel.thesis.model
+{
+	
+	public class Post
+	{
+		private var _sourceRating:Number;
+
+		public function get sourceRating():Number
+		{
+			return _sourceRating;
+		}
+
+		public function set sourceRating(value:Number):void
+		{
+			_sourceRating = value;
+		}
+
+		public var postRating:Number;
+		public var uri:String;
+		public var timestamp:Date;
+		public var summary:String = "";
+		public var title:String = "";
+		public var seen:Boolean = false;
+		public var color:String = "0xFFFFFF";
+		
+		public function Post()
+		{
+		}
+	}
+}

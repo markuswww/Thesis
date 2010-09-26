@@ -1,0 +1,9 @@
+package
+{
+	public class FeedTest
+	{
+		public function FeedTest()
+		{
+		}
+	}
+}

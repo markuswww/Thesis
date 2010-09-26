@@ -1,0 +1,22 @@
+package probe2
+{
+	import spark.components.SkinnableDataContainer;
+	import spark.skins.spark.SkinnableDataContainerSkin;
+	import PostBox;
+	
+	
+	public class PostContainer extends SkinnableDataContainer
+	{
+		public function PostContainer()
+		{
+			
+			createPostBox();
+		}
+		
+		private function createPostBox(){
+			
+		}
+		
+		
+	}
+}

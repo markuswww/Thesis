@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009"
+			   xmlns:s="library://ns.adobe.com/flex/spark"
+			   xmlns:mx="library://ns.adobe.com/flex/mx"
+			   xmlns:post="probe2.*" xmlns:tag="probe2.tag.*"
+		 >
+	
+	
+	<fx:Style>
+		@namespace tag "probe2.tag.*";
+		@namespace post "probe2.post.*";
+		
+		post|PostBox
+		{
+			skinClass: ClassReference("probe2.post.PostSkin");
+		}
+		tag|TagBox
+		{
+			skinClass: ClassReference("probe2.tag.TagSkin");
+		}
+	</fx:Style>
+	
+	
+	<mx:TabNavigator x="30" y="5" width="100%" height="100%" id="switcher">
+		<s:NavigatorContent id="view" label="View" width="100%" height="100%">
+			<components:Probe2
+			
+			
+		</s:NavigatorContent>
+		<s:NavigatorContent label="Detail" width="100%" height="100%">
+		</s:NavigatorContent>
+	</mx:TabNavigator>
+	
+</s:Application>

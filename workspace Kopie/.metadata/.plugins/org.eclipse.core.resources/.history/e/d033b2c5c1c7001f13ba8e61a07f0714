@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009"
+			   xmlns:s="library://ns.adobe.com/flex/spark"
+			   xmlns:mx="library://ns.adobe.com/flex/mx"
+			   xmlns:components="probe2.*" 
+			   creationComplete="onInit();">
+	
+	<fx:Style>
+		@namespace local "probe2.*";
+		
+		local|PostBox
+		{
+			skinClass: ClassReference("probe2.PostSkin");
+		}
+	</fx:Style>
+	
+	<s:layout>
+		<s:VerticalLayout gap="2" paddingLeft="50" paddingTop="50" />
+	</s:layout>
+	
+	<fx:Script>
+		<![CDATA[
+			import mx.collections.ArrayCollection;
+			
+			import probe2.PostBox;
+			import probe2.PostManager;
+			
+			var postManager:PostManager=PostManager.getInstance().createPostList();
+			
+			var posts:ArrayCollection=postManager.getPostList();
+			
+			public function onInit():void{	
+				for (var i:int=1; i<=10;i++){
+					var p:PostBox=new PostBox();
+					p._title="Das ist Post " +i;
+					p._url="http://www.mactechnews.de/news/index/Blizzard-aktualisiert-StarCraft-II-Wings-of-Liberty-147846.html";
+					view.addElement(p);
+				}
+			}
+		]]>
+	</fx:Script>
+	 
+	<mx:TabNavigator x="30" y="5" width="100%" height="100%" id="switcher">
+		<s:NavigatorContent id="view" label="View" width="100%" height="100%">
+			
+			<s:layout>
+				<s:VerticalLayout gap="1" />
+
+			</s:layout>
+			<!--components:PostBox id="post1" styleName="PostPanel" backgroundColor="#CCCCCC" 
+								_title="Hier steht eine beteutende Nachricht"
+								_url="http://www.mactechnews.de/news/index/Auswirkungen-der-entschaften-Entwickler-Richtlinien-Mehr-iOS-Apps-werden-zugelassen-147808.html">
+			</components:PostBox>
+			
+			<components:PostBox id="post2" styleName="PostPanel" backgroundColor="#CCCCCC" 
+								_title="Hier steht eine beteutende Nachricht"
+								_url="http://www.mactechnews.de/news/index/Auswirkungen-der-entschaften-Entwickler-Richtlinien-Mehr-iOS-Apps-werden-zugelassen-147808.html"
+								click="onInit();"
+								>
+			</components:PostBox>
+			<components:PostBox id="post3" styleName="PostPanel" backgroundColor="#CCCCCC" 
+								_title="Hier steht eine beteutende Nachricht"
+								_url="http://www.mactechnews.de/news/index/Auswirkungen-der-entschaften-Entwickler-Richtlinien-Mehr-iOS-Apps-werden-zugelassen-147808.html">
+				
+			</components:PostBox>
+			<components:PostBox id="post4" styleName="PostPanel" backgroundColor="#CCCCCC" 
+								_title="Hier steht eine beteutende Nachricht"
+								_url="http://www.mactechnews.de/news/index/Auswirkungen-der-entschaften-Entwickler-Richtlinien-Mehr-iOS-Apps-werden-zugelassen-147808.html"
+								click="onInit();"
+								>
+			</components:PostBox-->
+			
+		</s:NavigatorContent>
+		<s:NavigatorContent label="Detail" width="100%" height="100%">
+		</s:NavigatorContent>
+	</mx:TabNavigator>
+	
+</s:Application>

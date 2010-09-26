@@ -1,0 +1,69 @@
+package probe.chalkboard
+{
+import flash.events.MouseEvent;
+
+import mx.core.IVisualElementContainer;
+
+import spark.components.Button;
+import spark.components.supportClasses.SkinnableComponent;
+import spark.components.supportClasses.TextBase;
+
+[SkinState("normal")]
+[SkinState("disabled")]
+public class NoteCard extends SkinnableComponent
+{
+	public function NoteCard()
+	{
+		super();
+	}
+	
+	[Bindable] public var _title:String;
+	[Bindable] public var _url:String;
+	[Bindable] public var linkButton:LinkButton;
+	
+	
+	
+	override protected function partAdded(
+		partName:String, instance:Object):void {
+		super.partAdded(partName, instance);
+		if (instance==linkButton) {
+			linkButton.label=_title;
+			linkButton.addEventListener(
+				MouseEvent.CLICK, onHelpButton_click);
+		}
+		
+		
+	}
+	override protected function partRemoved(
+		partName:String, instance:Object):void {
+		super.partRemoved(partName, instance);
+		
+		if (instance==linkButton) {
+			linkButton.removeEventListener(
+				MouseEvent.CLICK, onHelpButton_click);
+		}
+		
+	}
+	
+	override public function set enabled(value:Boolean) : void
+	{
+		if (enabled != value)
+			invalidateSkinState();
+		
+		super.enabled = value;
+	}
+	
+	override protected function getCurrentSkinState() : String
+	{
+		if (!enabled)
+			return "disabled";
+		
+		return "normal"
+	}
+	
+	protected function onHelpButton_click(event:MouseEvent):void {
+		navigateToURL(new URLRequest("http://www.mactechnews.de/news/index/Auswirkungen-der-entschaften-Entwickler-Richtlinien-Mehr-iOS-Apps-werden-zugelassen-147808.html"),'_blank');
+	}
+
+}
+}

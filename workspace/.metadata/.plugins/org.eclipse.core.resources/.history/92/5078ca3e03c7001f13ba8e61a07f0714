@@ -1,0 +1,27 @@
+package probe2
+{
+	import PostBox.*;
+	
+	import spark.components.SkinnableDataContainer;
+	import spark.skins.spark.SkinnableDataContainerSkin;
+	
+	
+	public class PostContainer extends SkinnableDataContainer
+	{
+		public function PostContainer()
+		{
+			
+			createPostBox();
+		}
+		
+		private function createPostBox(){
+			for(var i:int=1;i<11;i++){
+				var p:PostBox=new PostBox();
+				p._title="ich bin post nr. "+i;
+				p._url="http://www.mactechnews.de/news/index.html";
+			}
+		}
+		
+		
+	}
+}

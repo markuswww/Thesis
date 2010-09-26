@@ -1,0 +1,30 @@
+package
+{
+	import mx.controls.Alert;
+	import mx.rpc.events.FaultEvent;
+	import com.adobe.xml.syndication.generic.IFeed;
+	import com.adobe.xml.syndication.generic.FeedFactory;
+	import mx.rpc.events.ResultEvent;
+	import mx.rpc.http.HTTPService;
+	import mx.collections.ArrayCollection;
+	
+	private static const FEED_URL:String = "http://rss.adobe.com/en/resources_flex.rss";
+	[Bindable] private var items:ArrayCollection = null;
+	
+	private function appComplete():void
+	{
+		var service:HTTPService = new HTTPService();
+		service.addEventListener(ResultEvent.RESULT, feedResult);
+		service.addEventListener(FaultEvent.FAULT, function():void{mx.controls.Alert.show("The RSS feed could not be loaded.");});
+		service.resultFormat = "e4x";
+		service.url = FEED_URL;
+		service.send();
+	}
+	
+	private function feedResult(event:ResultEvent):void 
+	{
+		var feedResult:XML = new XML(event.result);
+		var RSSFeed:IFeed = FeedFactory.getFeedByXML(feedResult);
+		items = new ArrayCollection(RSSFeed.items);
+	}
+}

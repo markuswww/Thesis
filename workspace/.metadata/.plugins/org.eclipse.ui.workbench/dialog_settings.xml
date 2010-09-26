@@ -4,11 +4,11 @@
 		<item value="false" key="WizardFileSystemResourceImportPage1.STORE_OVERWRITE_EXISTING_RESOURCES_ID"/>
 		<item value="false" key="WizardFileSystemResourceImportPage1.STORE_CREATE_CONTAINER_STRUCTURE_ID"/>
 		<list key="WizardFileSystemResourceImportPage1.STORE_SOURCE_NAMES_ID">
+			<item value="/Users/markus/Downloads/Intro to Skinning/src"/>
 			<item value="/Users/markus/Downloads/FlexDevTips_ResizeContainers/src"/>
 			<item value="/Users/markus/Downloads/ResizableTitleWindow/src"/>
 			<item value="/Users/markus/Downloads/ObjectHandles-2-1.0.0008/src"/>
 			<item value="/Users/markus/Downloads/ObjectHandles-2-1.0.0008/deploy"/>
-			<item value="/Users/markus/Downloads/ObjectHandles-2.0.0008/src/com"/>
 		</list>
 	</section>
 	<section name="NewWizardAction">
@@ -17,8 +17,15 @@
 			<item value="com.adobe.flexbuilder.project.ui.wizards.newWizards"/>
 		</list>
 	</section>
+	<section name="ShowViewDialog">
+		<item value="304" key="DIALOG_WIDTH"/>
+		<item value="129" key="DIALOG_Y_ORIGIN"/>
+		<item value="568" key="DIALOG_X_ORIGIN"/>
+		<item value="418" key="DIALOG_HEIGHT"/>
+		<item value="1|Lucida Grande|11.0|0|CARBON|1|Lucida Grande" key="DIALOG_FONT_NAME"/>
+	</section>
 	<section name="ImportExportAction">
-		<item value="org.eclipse.ui.wizards.import.FileSystem" key="ImportExportPage.STORE_SELECTED_IMPORT_WIZARD_ID"/>
+		<item value="org.eclipse.ui.wizards.import.ExternalProject" key="ImportExportPage.STORE_SELECTED_IMPORT_WIZARD_ID"/>
 		<list key="ImportExportPage.STORE_EXPANDED_IMPORT_CATEGORIES">
 			<item value="org.eclipse.ui.Basic"/>
 		</list>

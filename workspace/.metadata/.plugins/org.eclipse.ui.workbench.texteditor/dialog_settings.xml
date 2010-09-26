@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="249" key="DIALOG_WIDTH"/>
+		<item value="111" key="DIALOG_Y_ORIGIN"/>
+		<item value="403" key="DIALOG_HEIGHT"/>
+		<item value="828" key="DIALOG_X_ORIGIN"/>
+		<item value="1|Lucida Grande|11.0|0|CARBON|1|Lucida Grande" key="DIALOG_FONT_NAME"/>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="false" key="wrap"/>
+		<item value="false" key="isRegEx"/>
+		<item value="false" key="casesensitive"/>
+		<item value="false" key="incremental"/>
+		<item value="false" key="wholeword"/>
+		<item value="flightPlan" key="selection"/>
+		<list key="findhistory">
+			<item value="&lt;s:Rect left=&quot;0&quot; right=&quot;0&quot; top=&quot;0&quot; bottom=&quot;0&quot; radiusX=&quot;5&quot; radiusY=&quot;5&quot;&gt;"/>
+			<item value="flightPlan"/>
+			<item value="button"/>
+			<item value="help"/>
+			<item value="linkButt"/>
+			<item value="linkB"/>
+		</list>
+		<list key="replacehistory">
+			<item value=""/>
+		</list>
+	</section>
+</section>

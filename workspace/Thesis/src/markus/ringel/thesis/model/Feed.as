@@ -1,5 +1,7 @@
 package markus.ringel.thesis.model{
-	
+	import mx.collections.ArrayCollection;
+
+	[Bindable]
 	public class Feed{
 		
 		private var _id:int;
@@ -8,6 +10,10 @@ package markus.ringel.thesis.model{
 		private var _trust:Number;
 		private var _uri:String;
 		private var _muted:Boolean;
+		
+		private var _feedList:ArrayCollection=new ArrayCollection();
+		private var _tagList:ArrayCollection=new ArrayCollection();
+		
 		
 		public function Feed(){
 		}
@@ -68,6 +74,27 @@ package markus.ringel.thesis.model{
 		public function set muted(muted):void{
 			this._muted=muted;
 		}
+
+		public function get feedList():ArrayCollection
+		{
+			return _feedList;
+		}
+
+		public function set feedList(value:ArrayCollection):void
+		{
+			_feedList = value;
+		}
+
+		public function get tagList():ArrayCollection
+		{
+			return _tagList;
+		}
+
+		public function set tagList(value:ArrayCollection):void
+		{
+			_tagList = value;
+		}
+
 		
 		public funtion toString():String{
 			return "id: " + this._id + " name: " + this._name + " author: " 

@@ -1,8 +1,10 @@
 package markus.ringel.thesis.model{
+	[Bindable]
 	public class Tag{
 		
 		private var _id:int;
 		private var _name:String;
+		private var _color:String;
 		
 		public function Tag(){
 		}
@@ -18,6 +20,17 @@ package markus.ringel.thesis.model{
 		public function set name(name):void{
 			this._name=name;
 		}
+
+		public function get color():String
+		{
+			return _color;
+		}
+
+		public function set color(value:String):void
+		{
+			_color = value;
+		}
+
 		
 		public toString():String{
 			return "name: " + this._name;

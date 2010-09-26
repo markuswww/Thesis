@@ -1,0 +1,12 @@
+package markus.ringel.thesis.model
+{
+	[Bindable]
+	public class Pif
+	{
+		
+		private var 
+		public function Pif()
+		{
+		}
+	}
+}

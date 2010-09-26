@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009"
+			   xmlns:s="library://ns.adobe.com/flex/spark"
+			   xmlns:mx="library://ns.adobe.com/flex/mx"
+			   xmlns:components="probe2.*" 
+			   creationComplete="onInit();">
+	
+	<fx:Style>
+		@namespace local "probe2.*";
+		
+		local|PostBox
+		{
+			skinClass: ClassReference("probe2.PostSkin");
+		}
+		local|TagBox
+		{
+			skinClass: ClassReference("probe2.TagSkin");
+		}
+	</fx:Style>
+	
+	<fx:Script>
+		<![CDATA[
+			import markus.ringel.thesis.model.Post;
+			import mx.collections.ArrayCollection;
+			import probe2.PostManager;
+			import probe2.PostBox;
+			
+			var postManager:PostManager=PostManager.getInstance();
+			var allPosts:ArrayCollection=postManager.getPostList();
+			
+			public function onInit():void{	
+				
+				for each(var post:Post in allPosts){
+					var pb:PostBox=new PostBox();
+					pb._title=post.title;
+					pb._url=post.uri;
+					view.addElement(pb);
+				}
+			}
+		]]>
+	</fx:Script>
+	 
+	<mx:TabNavigator x="30" y="5" width="100%" height="100%" id="switcher">
+		<s:NavigatorContent id="view" label="View" width="100%" height="100%">
+			
+			<components:TagBox  color="#0000b4" title="Tag">
+				
+			</components:TagBox>
+			
+			<s:layout>
+				<s:VerticalLayout gap="1" paddingLeft="100"/>
+			</s:layout>
+
+		</s:NavigatorContent>
+		<s:NavigatorContent label="Detail" width="100%" height="100%">
+		</s:NavigatorContent>
+	</mx:TabNavigator>
+	
+</s:Application>

@@ -1,0 +1,119 @@
+package probe
+{
+	code = joy
+	Parsing RSS 2.0 Feeds in ActionScript 3
+	
+	with 84 comments
+	
+	One of the ActionScript libraries that I use most is the as3syndicationlib. This is an opensource library originally developed by Christian Cantrell, and open sourced by Adobe. The library provides code for parsing RSS 1.0, RSS 2.0 and ATOM data feeds. It also provides a generic interface for parsing feeds when you do not know the format of the feeds.
+		
+		Below is a simple example of how to use the library to parse an RSS 2.0 feed. The example is written in Flex 3 and ActionScript 3, although I have separated the code to make it easy to also use it within Flash CS3.
+			
+			In order to compile and run the code below, you need to download the SWC (or source code) for the as3syndicationlib and corelib libraries (as3syndicationlib requires corelib to compile).
+				
+				RSSExample.mxml
+				
+				<?xml version="1.0" encoding="utf-8"?>
+					<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute">
+					
+						<mx:Script source="RSSExampleClass.as" />
+					
+						<mx:TextArea left="20" top="10" bottom="40" right="10" id="outputField"/>
+						<mx:Button label="Load RSS" right="10" bottom="10" click="onLoadPress()"/>
+					
+					</mx:Application>
+					
+					RSSExampleClass.as
+		
+		import com.adobe.utils.XMLUtil;
+		import com.adobe.xml.syndication.rss.Item20;
+		import com.adobe.xml.syndication.rss.RSS20;
+		
+		import flash.events.Event;
+		import flash.events.IOErrorEvent;
+		import flash.events.SecurityErrorEvent;
+		import flash.net.URLLoader;
+		import flash.net.URLRequest;
+		import flash.net.URLRequestMethod;
+		
+		private var loader:URLLoader;
+		
+		//url of rss 2.0 feed
+		private static const RSS_URL:String = "http://feeds.feedburner.com/MikeChambers/";
+		
+		//called when user presses the button to load feed
+		private function onLoadPress():void
+		{
+			loader = new URLLoader();
+			
+			//request pointing to feed
+			var request:URLRequest = new URLRequest(RSS_URL);
+			request.method = URLRequestMethod.GET;
+			
+			//listen for when the data loads
+			loader.addEventListener(Event.COMPLETE, onDataLoad);
+			
+			//listen for error events
+			loader.addEventListener(IOErrorEvent.IO_ERROR, onIOError);
+			loader.addEventListener(SecurityErrorEvent.SECURITY_ERROR, onSecurityError);
+			
+			//load the feed data
+			loader.load(request);
+		}
+		
+		//called once the data has loaded from the feed
+		private function onDataLoad(e:Event):void
+		{
+			//get the raw string data from the feed
+			var rawRSS:String = URLLoader(e.target).data;
+			
+			//parse it as RSS
+			parseRSS(rawRSS);
+			
+		}
+		
+		//parses RSS 2.0 feed and prints out the feed titles into
+		//the text area
+		private function parseRSS(data:String):void
+		{
+			
+			//XMLSyndicationLibrary does not validate that the data contains valid
+			//XML, so you need to validate that the data is valid XML.
+			//We use the XMLUtil.isValidXML API from the corelib library.
+			if(!XMLUtil.isValidXML(data))
+			{
+				writeOutput("Feed does not contain valid XML.");
+				return;
+			}	
+			
+			//create RSS20 instance
+			var rss:RSS20 = new RSS20();
+			
+			//parse the raw rss data
+			rss.parse(data);
+			
+			//get all of the items within the feed
+			var items:Array = rss.items;
+			
+			//loop through each item in the feed
+			for each(var item:Item20 in items)
+			{
+				//print out the title of each item
+				writeOutput(item.title);
+			}
+		}
+		
+		private function writeOutput(data:String):void
+		{
+			outputField.text += data + "\n";
+		}
+		
+		private function onIOError(e:IOErrorEvent):void
+		{
+			writeOutput("IOError : " + e.text);
+		}
+		
+		private function onSecurityError(e:SecurityErrorEvent):void
+		{
+			writeOutput("SecurityError : " + e.text);
+		}

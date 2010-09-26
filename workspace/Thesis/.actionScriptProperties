@@ -13,8 +13,9 @@
     <sourceAttachmentPath/>
   </compiler>
   <applications>
-    <application path="Main.mxml"/>
-    <application path="ResizeContainers.mxml"/>
+    <application path="probe/chalkboard/Sample7.mxml"/>
+    <application path="probe2/Probe2.mxml"/>
+    <application path="Test2.mxml"/>
   </applications>
   <modules/>
   <buildCSSFiles/>

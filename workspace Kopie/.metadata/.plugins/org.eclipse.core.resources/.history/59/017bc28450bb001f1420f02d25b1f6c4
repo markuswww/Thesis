@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MockupSampleController xmlns="sampleBalsamiqClient.*" xmlns:mx="http://www.adobe.com/2006/mxml" width="100%" height="100%">
+  <mx:Canvas x="383" y="25" width="781" height="591" borderStyle="solid" borderColor="#000000" horizontalScrollPolicy="off" verticalScrollPolicy="off">
+    <mx:Label x="1" y="1" text="BrowserWindow" />
+    <mx:Label x="1" y="15" text="Missing mapping between Mockup and Flex component." />
+    <mx:Label x="1" y="23" text="Rendering as Canvas." />
+  </mx:Canvas>
+  <mx:VBox x="678" y="61" width="367" height="196" verticalGap="0">
+    <mx:TabBar dataProvider="tabBar9" direction="horizontal">
+    </mx:TabBar>
+    <mx:ViewStack id="tabBar9" width="100%" height="100%">
+      <mx:Canvas label="Options" width="100%" height="100%" backgroundColor="#ffffff" />
+    </mx:ViewStack>
+  </mx:VBox>
+  <mx:VBox x="396" y="97" width="367" height="196" verticalGap="0">
+    <mx:TabBar dataProvider="tabBar11" direction="horizontal">
+    </mx:TabBar>
+    <mx:ViewStack id="tabBar11" width="100%" height="100%">
+      <mx:Canvas label="Friends" width="100%" height="100%" backgroundColor="#ffffff" />
+    </mx:ViewStack>
+  </mx:VBox>
+  <mx:VBox x="305" y="263" width="367" height="196" verticalGap="0">
+    <mx:TabBar dataProvider="tabBar12" direction="horizontal">
+    </mx:TabBar>
+    <mx:ViewStack id="tabBar12" width="100%" height="100%">
+      <mx:Canvas label="Tags" width="100%" height="100%" backgroundColor="#ffffff" />
+    </mx:ViewStack>
+  </mx:VBox>
+  <mx:ColorPicker x="1252" y="222" selectedColor="255" />
+  <mx:Canvas x="1231" y="300" width="68" height="28" borderStyle="solid" borderColor="#000000" horizontalScrollPolicy="off" verticalScrollPolicy="off">
+    <mx:Label x="1" y="1" text="Switch" />
+    <mx:Label x="1" y="15" text="Missing mapping between Mockup and Flex component." />
+    <mx:Label x="1" y="23" text="Rendering as Canvas." />
+  </mx:Canvas>
+  <mx:Canvas x="773" y="300" width="367" height="244" borderStyle="solid" borderColor="#000000" horizontalScrollPolicy="off" verticalScrollPolicy="off">
+    <mx:Label x="1" y="1" text="" />
+    <mx:Label x="1" y="15" text="Missing mapping between Mockup and Flex component." />
+    <mx:Label x="1" y="23" text="Rendering as Canvas." />
+  </mx:Canvas>
+  <mx:VBox x="0" y="0" width="367" height="244" verticalGap="0">
+    <mx:TabBar dataProvider="tabBar0" direction="horizontal">
+    </mx:TabBar>
+    <mx:ViewStack id="tabBar0" width="100%" height="100%">
+      <mx:Canvas label="Feeds" width="100%" height="100%" backgroundColor="#ffffff" />
+    </mx:ViewStack>
+  </mx:VBox>
+  <mx:Canvas x="172" y="34" width="186" height="162" borderStyle="solid" borderColor="#000000" horizontalScrollPolicy="off" verticalScrollPolicy="off">
+    <mx:Label x="1" y="1" text="" />
+    <mx:Label x="1" y="15" text="Missing mapping between Mockup and Flex component." />
+    <mx:Label x="1" y="23" text="Rendering as Canvas." />
+  </mx:Canvas>
+  <mx:TextInput x="0" y="27" width="186">
+    <mx:textAlign>center</mx:textAlign>
+    <mx:text>Sportschau</mx:text>
+  </mx:TextInput>
+  <mx:TextInput x="0" y="54" width="186">
+    <mx:textAlign>center</mx:textAlign>
+    <mx:text>Coffee News</mx:text>
+  </mx:TextInput>
+  <mx:TextInput x="0" y="81" width="186">
+    <mx:textAlign>center</mx:textAlign>
+    <mx:text>Ron Orp</mx:text>
+  </mx:TextInput>
+  <mx:TextInput x="0" y="0" width="186">
+    <mx:textAlign>center</mx:textAlign>
+    <mx:text>Heise Developer</mx:text>
+  </mx:TextInput>
+  <mx:TextInput x="0" y="108" width="186">
+    <mx:textAlign>center</mx:textAlign>
+    <mx:text>Golem</mx:text>
+  </mx:TextInput>
+  <mx:TextInput x="0" y="135" width="186">
+    <mx:textAlign>center</mx:textAlign>
+    <mx:text>Wikileaks</mx:text>
+  </mx:TextInput>
+  <mx:Canvas x="15" y="34" width="142" height="195" borderStyle="solid" borderColor="#000000" horizontalScrollPolicy="off" verticalScrollPolicy="off">
+    <mx:Label x="1" y="1" text="" />
+    <mx:Label x="1" y="15" text="Missing mapping between Mockup and Flex component." />
+    <mx:Label x="1" y="23" text="Rendering as Canvas." />
+  </mx:Canvas>
+  <mx:Canvas x="0" y="61" width="70" height="28" borderStyle="solid" borderColor="#000000" horizontalScrollPolicy="off" verticalScrollPolicy="off">
+    <mx:Label x="1" y="1" text="" />
+    <mx:Label x="1" y="15" text="Missing mapping between Mockup and Flex component." />
+    <mx:Label x="1" y="23" text="Rendering as Canvas." />
+  </mx:Canvas>
+  <mx:ColorPicker x="44" y="0" selectedColor="255" />
+  <mx:Label x="0" y="3" width="35" height="23">
+    <mx:text>Color</mx:text>
+  </mx:Label>
+  <mx:Canvas x="0" y="30" width="104" height="28" borderStyle="solid" borderColor="#000000" horizontalScrollPolicy="off" verticalScrollPolicy="off">
+    <mx:Label x="1" y="1" text="" />
+    <mx:Label x="1" y="15" text="Missing mapping between Mockup and Flex component." />
+    <mx:Label x="1" y="23" text="Rendering as Canvas." />
+  </mx:Canvas>
+  <mx:Canvas x="36" y="0" width="68" height="28" borderStyle="solid" borderColor="#000000" horizontalScrollPolicy="off" verticalScrollPolicy="off">
+    <mx:Label x="1" y="1" text="Switch" />
+    <mx:Label x="1" y="15" text="Missing mapping between Mockup and Flex component." />
+    <mx:Label x="1" y="23" text="Rendering as Canvas." />
+  </mx:Canvas>
+  <mx:Label x="0" y="3" width="36" height="23">
+    <mx:text>Mute</mx:text>
+  </mx:Label>
+  <mx:Canvas x="0" y="0" width="95" height="27" borderStyle="solid" borderColor="#000000" horizontalScrollPolicy="off" verticalScrollPolicy="off">
+    <mx:Label x="1" y="1" text="" />
+    <mx:Label x="1" y="15" text="Missing mapping between Mockup and Flex component." />
+    <mx:Label x="1" y="23" text="Rendering as Canvas." />
+  </mx:Canvas>
+  <mx:Label x="0" y="1" width="38" height="23">
+    <mx:text>Name</mx:text>
+  </mx:Label>
+  <mx:TextInput x="43" y="0">
+    <mx:text>Sports</mx:text>
+  </mx:TextInput>
+  <mx:Canvas x="0" y="91" width="142" height="28" borderStyle="solid" borderColor="#000000" horizontalScrollPolicy="off" verticalScrollPolicy="off">
+    <mx:Label x="1" y="1" text="" />
+    <mx:Label x="1" y="15" text="Missing mapping between Mockup and Flex component." />
+    <mx:Label x="1" y="23" text="Rendering as Canvas." />
+  </mx:Canvas>
+  <mx:Button x="49" y="0" width="93" height="28">
+    <mx:label>www.ard.de</mx:label>
+  </mx:Button>
+  <mx:Label x="0" y="2" width="45" height="23">
+    <mx:text>Source</mx:text>
+  </mx:Label>
+  <mx:Canvas x="0" y="124" width="138" height="71" borderStyle="solid" borderColor="#000000" horizontalScrollPolicy="off" verticalScrollPolicy="off">
+    <mx:Label x="1" y="1" text="" />
+    <mx:Label x="1" y="15" text="Missing mapping between Mockup and Flex component." />
+    <mx:Label x="1" y="23" text="Rendering as Canvas." />
+  </mx:Canvas>
+  <mx:List x="81" y="0" width="57" height="71" dataProvider="{model.listProvider0}" />
+  <mx:Label x="0" y="0" width="77" height="23">
+    <mx:text>Tagged with</mx:text>
+  </mx:Label>
+  <mx:Canvas x="170" y="167" width="47" height="32" borderStyle="solid" borderColor="#000000" horizontalScrollPolicy="off" verticalScrollPolicy="off">
+    <mx:Label x="1" y="1" text="CallOut" />
+    <mx:Label x="1" y="15" text="Missing mapping between Mockup and Flex component." />
+    <mx:Label x="1" y="23" text="Rendering as Canvas." />
+  </mx:Canvas>
+  <mx:Canvas x="37" y="110" width="64" height="32" borderStyle="solid" borderColor="#000000" horizontalScrollPolicy="off" verticalScrollPolicy="off">
+    <mx:Label x="1" y="1" text="CallOut" />
+    <mx:Label x="1" y="15" text="Missing mapping between Mockup and Flex component." />
+    <mx:Label x="1" y="23" text="Rendering as Canvas." />
+  </mx:Canvas>
+  <mx:Canvas x="241" y="101" width="64" height="32" borderStyle="solid" borderColor="#000000" horizontalScrollPolicy="off" verticalScrollPolicy="off">
+    <mx:Label x="1" y="1" text="CallOut" />
+    <mx:Label x="1" y="15" text="Missing mapping between Mockup and Flex component." />
+    <mx:Label x="1" y="23" text="Rendering as Canvas." />
+  </mx:Canvas>
+  <mx:Canvas x="232" y="211" width="64" height="32" borderStyle="solid" borderColor="#000000" horizontalScrollPolicy="off" verticalScrollPolicy="off">
+    <mx:Label x="1" y="1" text="CallOut" />
+    <mx:Label x="1" y="15" text="Missing mapping between Mockup and Flex component." />
+    <mx:Label x="1" y="23" text="Rendering as Canvas." />
+  </mx:Canvas>
+  <mx:Canvas x="87" y="199" width="64" height="32" borderStyle="solid" borderColor="#000000" horizontalScrollPolicy="off" verticalScrollPolicy="off">
+    <mx:Label x="1" y="1" text="CallOut" />
+    <mx:Label x="1" y="15" text="Missing mapping between Mockup and Flex component." />
+    <mx:Label x="1" y="23" text="Rendering as Canvas." />
+  </mx:Canvas>
+  <mx:Canvas x="140" y="257" width="64" height="32" borderStyle="solid" borderColor="#000000" horizontalScrollPolicy="off" verticalScrollPolicy="off">
+    <mx:Label x="1" y="1" text="CallOut" />
+    <mx:Label x="1" y="15" text="Missing mapping between Mockup and Flex component." />
+    <mx:Label x="1" y="23" text="Rendering as Canvas." />
+  </mx:Canvas>
+  <mx:Canvas x="101" y="132" width="69" height="35" borderStyle="solid" borderColor="#000000" horizontalScrollPolicy="off" verticalScrollPolicy="off">
+    <mx:Label x="1" y="1" text="Arrow" />
+    <mx:Label x="1" y="15" text="Missing mapping between Mockup and Flex component." />
+    <mx:Label x="1" y="23" text="Rendering as Canvas." />
+  </mx:Canvas>
+  <mx:Canvas x="128" y="357" width="89" height="41" borderStyle="solid" borderColor="#000000" horizontalScrollPolicy="off" verticalScrollPolicy="off">
+    <mx:Label x="1" y="1" text="RoundButton" />
+    <mx:Label x="1" y="15" text="Missing mapping between Mockup and Flex component." />
+    <mx:Label x="1" y="23" text="Rendering as Canvas." />
+  </mx:Canvas>
+</MockupSampleController>

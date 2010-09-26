@@ -1,0 +1,9 @@
+package probe
+{
+	public class FeedParser
+	{
+		public function FeedParser()
+		{
+		}
+	}
+}

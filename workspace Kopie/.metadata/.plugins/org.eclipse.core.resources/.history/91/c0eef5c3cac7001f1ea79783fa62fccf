@@ -1,0 +1,19 @@
+package probe2
+{
+	import spark.primitives.Rect;
+
+	public class TagBox extends SkinnableContainer
+	{
+		[Bindable] 
+		public var title:String;
+		
+		public var tagColor:Rect;
+		[Bindable] 
+		
+		
+		public function TagBox()
+		{
+			super();
+		}
+	}
+}

@@ -1,0 +1,17 @@
+package probe2
+{
+	public class TagBox extends SkinnableContainer
+	{
+		[Bindable] 
+		public var title:String;
+		
+		public var linkButton:LinkButton;
+		[Bindable] 
+		
+		
+		public function TagBox()
+		{
+			super();
+		}
+	}
+}

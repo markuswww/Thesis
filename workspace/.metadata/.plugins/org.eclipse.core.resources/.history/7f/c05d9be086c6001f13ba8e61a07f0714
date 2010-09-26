@@ -1,0 +1,65 @@
+package probe2
+{
+	import flash.events.MouseEvent;
+	import flash.net.URLRequest;
+	import flash.net.navigateToURL;
+	
+	import mx.core.IVisualElementContainer;
+	import mx.events.FlexEvent;
+	import mx.controls.LinkButton;
+		
+	
+	import spark.components.SkinnableContainer;
+
+	import flash.net.navigateToURL;
+	import flash.net.URLRequest;
+	
+	public class PostBox extends SkinnableContainer
+	{
+		
+		
+		[Bindable] private var _title:String;
+		[Bindable] public var _url:String;
+		[Bindable] public var linkButton:LinkButton;
+	
+		public function PostBox()
+		{
+			super();
+		}
+		
+		override protected function partAdded(
+			partName:String, instance:Object):void {
+			super.partAdded(partName, instance);
+			
+			
+			if (instance==linkButton) {
+				linkButton.label=_title;
+				linkButton.addEventListener(
+					MouseEvent.CLICK, onHelpButton_click);
+			}
+			
+		
+		}
+		override protected function partRemoved(
+			partName:String, instance:Object):void {
+			super.partRemoved(partName, instance);
+			
+			if (instance==linkButton) {
+				linkButton.removeEventListener(
+					MouseEvent.CLICK, onHelpButton_click);
+			}
+			
+		}
+		
+		protected function onHelpButton_click(event:MouseEvent):void {
+			navigateToURL(new URLRequest("http://www.mactechnews.de/news/index/Auswirkungen-der-entschaften-Entwickler-Richtlinien-Mehr-iOS-Apps-werden-zugelassen-147808.html"),'_blank');
+		}
+		
+		override protected function updateDisplayList(unscaledWidth:Number, unscaledHeight:Number):void
+		{
+			super.updateDisplayList(unscaledWidth, unscaledHeight);
+			
+		}
+		
+	}
+}

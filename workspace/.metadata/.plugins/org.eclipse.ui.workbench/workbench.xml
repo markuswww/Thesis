@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="46" version="2.0">
+<workbench progressCount="39" version="2.0">
 <workbenchAdvisor/>
 <window height="814" width="1440" x="0" y="22">
 <fastViewData fastViewLocation="1024"/>
@@ -22,6 +22,7 @@
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="156" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="com.adobe.flexbuilder.editors.css.editors.CSSEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.wst.html.core.htmlsource.source" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
@@ -38,20 +39,42 @@
 <part id="0"/>
 <part id="1"/>
 <part id="2"/>
+<part id="3"/>
+<part id="4"/>
+<part id="5"/>
+<part id="6"/>
+<part id="7"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="com.adobe.flexbuilder.editors.mxml.MXMLEditor" name="Main.mxml" partName="Main.mxml" path="/Users/markus/Documents/Bachelor/Thesis/workspace/Thesis/src/Main.mxml" title="Main.mxml" tooltip="Thesis/src/Main.mxml" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Thesis/src/Main.mxml"/>
+<editor id="com.adobe.flexbuilder.editors.mxml.MXMLEditor" name="PostSkin.mxml" partName="PostSkin.mxml" path="/Users/markus/Documents/Bachelor/Thesis/workspace/Thesis/src/probe2/post/PostSkin.mxml" title="PostSkin.mxml" tooltip="Thesis/src/probe2/PostSkin.mxml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Thesis/src/probe2/post/PostSkin.mxml"/>
 </editor>
-<editor id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="PostContainer.as" partName="PostContainer.as" path="/Users/markus/Documents/Bachelor/Thesis/workspace/Thesis/src/post/PostContainer.as" title="PostContainer.as" tooltip="Thesis/src/post/PostContainer.as" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Thesis/src/post/PostContainer.as"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="225" selectionTopPixel="0"/>
+<editor id="com.adobe.flexbuilder.editors.mxml.MXMLEditor" name="TagSkin.mxml" partName="TagSkin.mxml" path="/Users/markus/Documents/Bachelor/Thesis/workspace/Thesis/src/probe2/tag/TagSkin.mxml" title="TagSkin.mxml" tooltip="Thesis/src/probe2/TagSkin.mxml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Thesis/src/probe2/tag/TagSkin.mxml"/>
 </editor>
-<editor id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="StyleUtils.as" partName="StyleUtils.as" path="/Users/markus/Documents/Bachelor/Thesis/workspace/Thesis/src/flex/utils/ui/StyleUtils.as" title="StyleUtils.as" tooltip="Thesis/src/flex/utils/ui/StyleUtils.as" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Thesis/src/flex/utils/ui/StyleUtils.as"/>
-<editorState selectionHorizontalPixel="0" selectionLength="45" selectionOffset="1180" selectionTopPixel="0"/>
+<editor activePart="true" focus="true" id="com.adobe.flexbuilder.editors.mxml.MXMLEditor" name="Probe2.mxml" partName="Probe2.mxml" path="/Users/markus/Documents/Bachelor/Thesis/workspace/Thesis/src/probe2/Probe2.mxml" title="Probe2.mxml" tooltip="Thesis/src/probe2/Probe2.mxml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Thesis/src/probe2/Probe2.mxml"/>
+</editor>
+<editor id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="TagBox.as" partName="TagBox.as" path="/Users/markus/Documents/Bachelor/Thesis/workspace/Thesis/src/probe2/tag/TagBox.as" title="TagBox.as" tooltip="Thesis/src/probe2/tag/TagBox.as" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Thesis/src/probe2/tag/TagBox.as"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="218" selectionTopPixel="0"/>
+</editor>
+<editor id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="PostBox.as" partName="PostBox.as" path="/Users/markus/Documents/Bachelor/Thesis/workspace/Thesis/src/probe2/post/PostBox.as" title="PostBox.as" tooltip="Thesis/src/probe2/post/PostBox.as" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Thesis/src/probe2/post/PostBox.as"/>
+<editorState selectionHorizontalPixel="0" selectionLength="503" selectionOffset="904" selectionTopPixel="539"/>
+</editor>
+<editor id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="PostManager.as" partName="PostManager.as" path="/Users/markus/Documents/Bachelor/Thesis/workspace/Thesis/src/probe2/post/PostManager.as" title="PostManager.as" tooltip="Thesis/src/probe2/post/PostManager.as" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Thesis/src/probe2/post/PostManager.as"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="com.adobe.flexbuilder.editors.mxml.MXMLEditor" name="ReaderBox.mxml" partName="ReaderBox.mxml" path="/Users/markus/Documents/Bachelor/Thesis/workspace/Thesis/src/probe2/ReaderBox.mxml" title="ReaderBox.mxml" tooltip="Thesis/src/probe2/ReaderBox.mxml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Thesis/src/probe2/ReaderBox.mxml"/>
+</editor>
+<editor id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="PostContainer.as" partName="PostContainer.as" path="/Users/markus/Documents/Bachelor/Thesis/workspace/Thesis/src/probe2/post/PostContainer.as" title="PostContainer.as" tooltip="Thesis/src/probe2/post/PostContainer.as" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Thesis/src/probe2/post/PostContainer.as"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="161" selectionTopPixel="0"/>
 </editor>
 </editors>
 <views>
@@ -61,12 +84,14 @@
 <fpeElement fpePath="/Thesis"/>
 <fpeElement fpePath="/Thesis/src"/>
 <fpeElement fpePath="/Thesis/src/%typeDefaultPackage"/>
-<fpeElement fpePath="/Thesis/src/flex/utils/ui"/>
-<fpeElement fpePath="/Thesis/bin-debug"/>
-<fpeElement fpePath="/Thesis/libs"/>
+<fpeElement fpePath="/Thesis/src/probe"/>
+<fpeElement fpePath="/Thesis/src/probe/aggregate"/>
+<fpeElement fpePath="/Thesis/src/probe2"/>
+<fpeElement fpePath="/Thesis/src/probe2/post"/>
+<fpeElement fpePath="/Thesis/src/probe2/tag"/>
 </fpeExpanded>
 <fpeSelection>
-<fpeElement fpePath="/Thesis/src/Main.mxml"/>
+<fpeElement fpePath="/Thesis/src/probe2/post/PostContainer.as"/>
 </fpeSelection>
 <filters>
 <filter element="*.class" isEnabled="false"/>
@@ -82,15 +107,18 @@
 </filters>
 <expanded>
 <element path="/Thesis"/>
-<element path="/Thesis/bin-debug"/>
-<element path="/Thesis/libs"/>
 </expanded>
 <selection>
-<element path="/Thesis/src/Main.mxml"/>
+<element path="/Thesis/src/probe2/post/PostContainer.as"/>
 </selection>
 </viewState>
 </view>
-<view id="com.adobe.flexbuilder.monitors.network.view.NetworkMonitorView" partName="Netzwerküberwachung"/>
+<view id="org.eclipse.pde.runtime.LogView" partName="Error Log">
+<viewState activate="true" allSessions="true" column2="689" column3="150" column4="150" error="true" groupBy="0" info="true" limit="50" ok="true" orderType="2" orderValue="-1" show_filter_text="true" useLimit="true" warning="true"/>
+</view>
+<view id="com.adobe.flexbuilder.monitors.network.view.NetworkMonitorView" partName="Netzwerküberwachung">
+<viewState/>
+</view>
 <view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
 <viewState/>
 </view>
@@ -113,7 +141,6 @@
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
-<category IMemento.internal.id="Errors (12 items)"/>
 <category IMemento.internal.id="Warnings"/>
 <category IMemento.internal.id="Errors"/>
 </expanded>
@@ -267,8 +294,8 @@
 <alwaysOnActionSet id="org.eclipse.debug.ui.breakpointActionSet"/>
 <alwaysOnActionSet id="com.adobe.flexbuilder.debug.ui.flexDebuggingActionSet"/>
 <alwaysOnActionSet id="com.adobe.flexbuilder.zzz.editors.common.ui.project.publish"/>
-<alwaysOnActionSet id="com.adobe.flexbuilder.as.editor.ui.NavigationActions"/>
 <alwaysOnActionSet id="com.adobe.flexbuilder.dcrad.actionSet"/>
+<alwaysOnActionSet id="com.adobe.flexbuilder.as.editor.ui.NavigationActions"/>
 <show_view_action id="com.adobe.flexbuilder.mxml.editor.AppearanceView"/>
 <show_view_action id="com.adobe.flexbuilder.mxml.editor.components.ComponentsView"/>
 <show_view_action id="com.adobe.flexbuilder.packageexplorer"/>
@@ -299,12 +326,13 @@
 <perspective_action id="com.adobe.flexbuilder.debug.ui.perspectives.debug"/>
 <perspective_action id="com.adobe.flash.profiler.ui.ProfilingPerspective"/>
 <hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
-<view id="com.adobe.flexbuilder.packageexplorer"/>
-<view id="org.eclipse.ui.views.ContentOutline"/>
 <view id="org.eclipse.ui.views.ProblemView"/>
 <view id="com.adobe.flexbuilder.dcrad.views.DataServicesView"/>
 <view id="com.adobe.flexbuilder.monitors.network.view.NetworkMonitorView"/>
 <view id="com.adobe.flexbuilder.as.editor.asdocviewer"/>
+<view id="org.eclipse.pde.runtime.LogView"/>
+<view id="com.adobe.flexbuilder.packageexplorer"/>
+<view id="org.eclipse.ui.views.ContentOutline"/>
 <fastViewBars/>
 <layout>
 <mainWindow>
@@ -342,6 +370,7 @@
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="com.adobe.flexbuilder.dcrad.views.DataServicesView" label="Daten/Dienste"/>
 <page content="com.adobe.flexbuilder.monitors.network.view.NetworkMonitorView" label="Netzwerküberwachung"/>
+<page content="org.eclipse.pde.runtime.LogView" label="Error Log"/>
 <page content="com.adobe.flexbuilder.as.editor.asdocviewer" label="ASDoc"/>
 <page content="org.eclipse.ui.console.ConsoleView" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
@@ -349,6 +378,7 @@
 <part id="1"/>
 <part id="2"/>
 <part id="3"/>
+<part id="4"/>
 </presentation>
 </folder>
 </info>
@@ -368,172 +398,168 @@
 <workingSets/>
 <navigationHistory>
 <editors>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.mxml.MXMLEditor" path="/Thesis/src/Probe2.mxml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" path="/Thesis/src/probe2/tag/TagBox.as"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" path="/Thesis/src/probe2/post/PostManager.as"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.mxml.MXMLEditor" path="/Thesis/src/probe2/post/PostSkin.mxml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.mxml.MXMLEditor" path="/Thesis/src/probe2/tag/TagSkin.mxml"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.mxml.MXMLEditor" path="/Thesis/src/Main.mxml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/Thesis/libs/ObjectHandles-2.0.0008_FLEX4.swc"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" path="/Thesis/src/roguedevelopment/objecthandles/CircleHandle.as"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.mxml.MXMLEditor" path="/Thesis/src/ObjectHandlesFlex4Example.mxml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.mxml.editor.MXMLCodeEditor" path="/Thesis/src/Main.mxml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" path="/Thesis/src/post/PostContainer.as"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" path="/Thesis/src/test/ResizableTitleWindow.as"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.mxml.MXMLEditor" path="/Thesis/src/test/ResizableTitleWindowApp.mxml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.mxml.MXMLEditor" path="/Thesis/src/test/ResizableTitleWindowSkin.mxml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" path="/Thesis/src/ui/StyleUtils.as"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.mxml.MXMLEditor" path="/Thesis/src/ResizeContainers.mxml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" path="/Thesis/src/test/flex/utils/ui/ui/StyleUtils.as"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" path="/Thesis/src/flex/utils/ui/StyleUtils.as"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.mxml.editor.MXMLCodeEditor" path="/Thesis/src/ResizeContainers.mxml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.mxml.MXMLEditor" path="/Thesis/src/HandlesTest.mxml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/Thesis/libs/ObjectHandles-2.0.0008_FLEX4.swc"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.mxml.MXMLEditor" path="/Thesis/src/probe/Probe.mxml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" path="/Thesis/src/probe/aggregate/FeedTest.as"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.mxml.MXMLEditor" path="/Thesis/src/probe/aggregate/FeedReader.mxml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.mxml.MXMLEditor" path="/Thesis/src/probe2/ReaderBox.mxml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.mxml.MXMLEditor" path="/Thesis/src/probe2/Probe2.mxml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" path="/Thesis/src/probe2/post/PostContainer.as"/>
 </editors>
-<item historyLabel="ObjectHandles-2.0.0008_FLEX4.swc" index="1">
+<item historyLabel="PostSkin.mxml" index="3">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="Main.mxml" index="0">
-<position/>
-</item>
-<item historyLabel="CircleHandle.as" index="2">
-<position info="not_deleted" x="53" y="34"/>
-</item>
-<item historyLabel="Main.mxml" index="0">
-<position/>
-</item>
-<item historyLabel="ObjectHandlesFlex4Example.mxml" index="3">
+<item historyLabel="Main.mxml" index="5">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="Main.mxml" index="0">
-<position info="not_deleted" x="705" y="0"/>
-</item>
-<item historyLabel="Main.mxml" index="4">
-<position info="not_deleted" x="761" y="62"/>
-</item>
-<item historyLabel="ObjectHandlesFlex4Example.mxml" index="3">
-<position/>
-</item>
-<item historyLabel="Main.mxml" index="0">
-<position info="not_deleted" x="761" y="62"/>
-</item>
-<item historyLabel="PostContainer.as" index="5">
-<position info="not_deleted" x="225" y="0"/>
-</item>
-<item historyLabel="Main.mxml" index="0">
-<position info="not_deleted" x="359" y="0"/>
-</item>
-<item historyLabel="ResizableTitleWindow.as" index="6">
-<position info="not_deleted" x="574" y="0"/>
-</item>
-<item historyLabel="ResizableTitleWindowApp.mxml" index="7">
-<position info="not_deleted" x="1079" y="0"/>
-</item>
-<item historyLabel="ResizableTitleWindow.as" index="6">
-<position info="not_deleted" x="126" y="0"/>
-</item>
-<item historyLabel="ResizableTitleWindowSkin.mxml" index="8">
+<item historyLabel="PostSkin.mxml" index="3">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="Main.mxml" index="0">
-<position info="not_deleted" x="359" y="0"/>
+<item historyLabel="Probe2.mxml" index="0">
+<position info="not_deleted" x="251" y="0"/>
 </item>
-<item historyLabel="ResizableTitleWindowSkin.mxml" index="8">
-<position info="not_deleted" x="1021" y="0"/>
-</item>
-<item historyLabel="ResizableTitleWindowApp.mxml" index="7">
-<position info="not_deleted" x="1079" y="0"/>
-</item>
-<item historyLabel="ResizableTitleWindow.as" index="6">
-<position info="not_deleted" x="126" y="0"/>
-</item>
-<item historyLabel="ResizableTitleWindowApp.mxml" index="7">
-<position/>
-</item>
-<item historyLabel="ResizableTitleWindow.as" index="6">
-<position info="not_deleted" x="126" y="0"/>
-</item>
-<item historyLabel="ResizableTitleWindowApp.mxml" index="7">
-<position/>
-</item>
-<item historyLabel="ResizableTitleWindow.as" index="6">
-<position info="not_deleted" x="126" y="0"/>
-</item>
-<item historyLabel="ResizableTitleWindowApp.mxml" index="7">
-<position/>
-</item>
-<item historyLabel="ResizableTitleWindow.as" index="6">
-<position info="not_deleted" x="126" y="0"/>
-</item>
-<item historyLabel="ResizableTitleWindowApp.mxml" index="7">
-<position info="not_deleted" x="1118" y="0"/>
-</item>
-<item historyLabel="ResizableTitleWindow.as" index="6">
-<position info="not_deleted" x="126" y="0"/>
-</item>
-<item historyLabel="StyleUtils.as" index="9">
+<item historyLabel="PostManager.as" index="2">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="StyleUtils.as" index="9">
-<position info="not_deleted" x="1169" y="45"/>
+<item historyLabel="Probe2.mxml" index="0">
+<position info="not_deleted" x="432" y="0"/>
 </item>
-<item historyLabel="ResizeContainers.mxml" index="10">
+<item historyLabel="TagBox.as" index="1">
+<position info="not_deleted" x="218" y="0"/>
+</item>
+<item historyLabel="Probe2.mxml" index="0">
+<position info="not_deleted" x="373" y="0"/>
+</item>
+<item historyLabel="TagSkin.mxml" index="4">
+<position info="not_deleted" x="903" y="0"/>
+</item>
+<item historyLabel="Probe.mxml" index="6">
+<position info="not_deleted" x="222" y="0"/>
+</item>
+<item historyLabel="TagSkin.mxml" index="4">
+<position info="not_deleted" x="903" y="0"/>
+</item>
+<item historyLabel="FeedTest.as" index="7">
+<position info="not_deleted" x="1086" y="99"/>
+</item>
+<item historyLabel="TagSkin.mxml" index="4">
+<position info="not_deleted" x="903" y="0"/>
+</item>
+<item historyLabel="FeedReader.mxml" index="8">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="StyleUtils.as" index="9">
-<position info="not_deleted" x="1169" y="45"/>
+<item historyLabel="TagSkin.mxml" index="4">
+<position info="not_deleted" x="903" y="0"/>
 </item>
-<item historyLabel="StyleUtils.as" index="11">
-<position info="not_deleted" x="1188" y="45"/>
+<item historyLabel="Probe2.mxml" index="0">
+<position info="not_deleted" x="373" y="0"/>
 </item>
-<item historyLabel="StyleUtils.as" index="12">
-<position info="not_deleted" x="1180" y="45"/>
-</item>
-<item historyLabel="ResizeContainers.mxml" index="10">
-<position info="not_deleted" x="1279" y="0"/>
-</item>
-<item historyLabel="Main.mxml" index="0">
-<position info="not_deleted" x="462" y="268"/>
-</item>
-<item historyLabel="ResizeContainers.mxml" index="10">
-<position info="not_deleted" x="1279" y="0"/>
-</item>
-<item historyLabel="ResizeContainers.mxml" index="13">
-<position/>
-</item>
-<item historyLabel="Main.mxml" index="0">
-<position info="not_deleted" x="54" y="171"/>
-</item>
-<item historyLabel="ResizeContainers.mxml" index="10">
-<position info="not_deleted" x="1075" y="0"/>
-</item>
-<item historyLabel="HandlesTest.mxml" index="14">
+<item historyLabel="ReaderBox.mxml" index="9">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="ResizeContainers.mxml" index="10">
-<position info="not_deleted" x="1075" y="0"/>
+<item historyLabel="Probe2.mxml" index="10">
+<position info="not_deleted" x="192" y="0"/>
 </item>
-<item historyLabel="Main.mxml" index="0">
-<position info="not_deleted" x="54" y="171"/>
+<item historyLabel="ReaderBox.mxml" index="9">
+<position info="not_deleted" x="235" y="0"/>
 </item>
-<item historyLabel="ResizeContainers.mxml" index="10">
-<position/>
+<item historyLabel="Probe2.mxml" index="10">
+<position info="not_deleted" x="292" y="771"/>
 </item>
-<item historyLabel="Main.mxml" index="0">
-<position info="not_deleted" x="295" y="0"/>
+<item historyLabel="ReaderBox.mxml" index="9">
+<position info="not_deleted" x="1010" y="0"/>
 </item>
-<item historyLabel="ResizeContainers.mxml" index="10">
-<position/>
+<item historyLabel="Probe2.mxml" index="10">
+<position info="not_deleted" x="1066" y="0"/>
 </item>
-<item historyLabel="Main.mxml" index="0">
-<position info="not_deleted" x="295" y="0"/>
+<item historyLabel="ReaderBox.mxml" index="9">
+<position info="not_deleted" x="1010" y="0"/>
 </item>
-<item historyLabel="ResizeContainers.mxml" index="10">
-<position info="not_deleted" x="482" y="743"/>
+<item historyLabel="Probe2.mxml" index="10">
+<position info="not_deleted" x="1068" y="56"/>
 </item>
-<item historyLabel="Main.mxml" index="0">
-<position/>
+<item historyLabel="ReaderBox.mxml" index="9">
+<position info="not_deleted" x="1072" y="0"/>
 </item>
-<item historyLabel="ObjectHandles-2.0.0008_FLEX4.swc" index="15">
+<item historyLabel="Probe2.mxml" index="10">
+<position info="not_deleted" x="1280" y="168"/>
+</item>
+<item historyLabel="ReaderBox.mxml" index="9">
+<position info="not_deleted" x="1249" y="0"/>
+</item>
+<item historyLabel="Probe2.mxml" index="10">
+<position info="not_deleted" x="199" y="52"/>
+</item>
+<item historyLabel="ReaderBox.mxml" index="9">
+<position info="not_deleted" x="265" y="0"/>
+</item>
+<item historyLabel="Probe2.mxml" index="10">
+<position info="not_deleted" x="440" y="0"/>
+</item>
+<item historyLabel="ReaderBox.mxml" index="9">
+<position info="not_deleted" x="396" y="0"/>
+</item>
+<item historyLabel="Probe2.mxml" index="10">
+<position info="not_deleted" x="256" y="0"/>
+</item>
+<item historyLabel="ReaderBox.mxml" index="9">
+<position info="not_deleted" x="780" y="0"/>
+</item>
+<item historyLabel="PostContainer.as" index="11">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item active="true" historyLabel="Main.mxml" index="0">
+<item historyLabel="ReaderBox.mxml" index="9">
+<position info="not_deleted" x="780" y="0"/>
+</item>
+<item historyLabel="PostContainer.as" index="11">
 <position/>
+</item>
+<item historyLabel="ReaderBox.mxml" index="9">
+<position info="not_deleted" x="780" y="0"/>
+</item>
+<item historyLabel="Probe2.mxml" index="10">
+<position info="not_deleted" x="256" y="0"/>
+</item>
+<item historyLabel="ReaderBox.mxml" index="9">
+<position info="not_deleted" x="780" y="0"/>
+</item>
+<item historyLabel="Probe2.mxml" index="10">
+<position info="not_deleted" x="256" y="0"/>
+</item>
+<item historyLabel="ReaderBox.mxml" index="9">
+<position info="not_deleted" x="888" y="154"/>
+</item>
+<item historyLabel="PostContainer.as" index="11">
+<position info="not_deleted" x="607" y="0"/>
+</item>
+<item historyLabel="Probe2.mxml" index="10">
+<position info="not_deleted" x="256" y="0"/>
+</item>
+<item historyLabel="ReaderBox.mxml" index="9">
+<position info="not_deleted" x="296" y="244"/>
+</item>
+<item historyLabel="Probe2.mxml" index="10">
+<position info="not_deleted" x="681" y="0"/>
+</item>
+<item historyLabel="PostContainer.as" index="11">
+<position info="not_deleted" x="607" y="0"/>
+</item>
+<item historyLabel="PostContainer.as" index="11">
+<position info="not_deleted" x="161" y="0"/>
+</item>
+<item historyLabel="Probe2.mxml" index="10">
+<position info="not_deleted" x="681" y="0"/>
+</item>
+<item historyLabel="PostContainer.as" index="11">
+<position info="not_deleted" x="161" y="0"/>
+</item>
+<item active="true" historyLabel="Probe2.mxml" index="10">
+<position info="not_deleted" x="681" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -552,50 +578,50 @@
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="ObjectHandles-2.0.0008_FLEX4.swc" tooltip="Thesis/libs/ObjectHandles-2.0.0008_FLEX4.swc">
-<persistable path="/Thesis/libs/ObjectHandles-2.0.0008_FLEX4.swc"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="PostContainer.as" tooltip="Thesis/src/probe2/post/PostContainer.as">
+<persistable path="/Thesis/src/probe2/post/PostContainer.as"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.mxml.MXMLEditor" name="HandlesTest.mxml" tooltip="Thesis/src/HandlesTest.mxml">
-<persistable path="/Thesis/src/HandlesTest.mxml"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.mxml.MXMLEditor" name="ReaderBox.mxml" tooltip="Thesis/src/probe2/ReaderBox.mxml">
+<persistable path="/Thesis/src/probe2/ReaderBox.mxml"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.mxml.MXMLEditor" name="ResizeContainers.mxml" tooltip="Thesis/src/ResizeContainers.mxml">
-<persistable path="/Thesis/src/ResizeContainers.mxml"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.mxml.MXMLEditor" name="FeedReader.mxml" tooltip="Thesis/src/probe/aggregate/FeedReader.mxml">
+<persistable path="/Thesis/src/probe/aggregate/FeedReader.mxml"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="StyleUtils.as" tooltip="Thesis/src/ui/StyleUtils.as">
-<persistable path="/Thesis/src/ui/StyleUtils.as"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="FeedTest.as" tooltip="Thesis/src/probe/aggregate/FeedTest.as">
+<persistable path="/Thesis/src/probe/aggregate/FeedTest.as"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.mxml.MXMLEditor" name="ResizableTitleWindowSkin.mxml" tooltip="Thesis/src/test/ResizableTitleWindowSkin.mxml">
-<persistable path="/Thesis/src/test/ResizableTitleWindowSkin.mxml"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.mxml.MXMLEditor" name="Probe.mxml" tooltip="Thesis/src/probe/Probe.mxml">
+<persistable path="/Thesis/src/probe/Probe.mxml"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.mxml.MXMLEditor" name="ResizableTitleWindowApp.mxml" tooltip="Thesis/src/test/ResizableTitleWindowApp.mxml">
-<persistable path="/Thesis/src/test/ResizableTitleWindowApp.mxml"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.mxml.MXMLEditor" name="Main.mxml" tooltip="Thesis/src/Main.mxml">
+<persistable path="/Thesis/src/Main.mxml"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="ResizableTitleWindow.as" tooltip="Thesis/src/test/ResizableTitleWindow.as">
-<persistable path="/Thesis/src/test/ResizableTitleWindow.as"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.mxml.MXMLEditor" name="CreatePosts.mxml" tooltip="Thesis/src/CreatePosts.mxml">
+<persistable path="/Thesis/src/CreatePosts.mxml"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.mxml.MXMLEditor" name="ObjectHandlesFlex4Example.mxml" tooltip="Thesis/src/ObjectHandlesFlex4Example.mxml">
-<persistable path="/Thesis/src/ObjectHandlesFlex4Example.mxml"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="PostManager.as" tooltip="Thesis/src/probe2/post/PostManager.as">
+<persistable path="/Thesis/src/probe2/post/PostManager.as"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="CircleHandle.as" tooltip="Thesis/src/roguedevelopment/objecthandles/CircleHandle.as">
-<persistable path="/Thesis/src/roguedevelopment/objecthandles/CircleHandle.as"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.mxml.MXMLEditor" name="NoteCardSkin.mxml" tooltip="Thesis/src/probe/chalkboard/NoteCardSkin.mxml">
+<persistable path="/Thesis/src/probe/chalkboard/NoteCardSkin.mxml"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="MoveableTextArea.as" tooltip="Thesis/src/MoveableTextArea.as">
-<persistable path="/Thesis/src/MoveableTextArea.as"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.mxml.MXMLEditor" name="ColorBox.mxml" tooltip="Thesis/src/probe2/ColorBox.mxml">
+<persistable path="/Thesis/src/probe2/ColorBox.mxml"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.mxml.MXMLEditor" name="SimpleFlex4Shape.mxml" tooltip="Thesis/src/SimpleFlex4Shape.mxml">
-<persistable path="/Thesis/src/SimpleFlex4Shape.mxml"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.mxml.MXMLEditor" name="NoteCardCloseButtonSkin.mxml" tooltip="Thesis/src/probe/chalkboard/NoteCardCloseButtonSkin.mxml">
+<persistable path="/Thesis/src/probe/chalkboard/NoteCardCloseButtonSkin.mxml"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.mxml.MXMLEditor" name="Flex4Example1.mxml" tooltip="Thesis/src/Flex4Example1.mxml">
-<persistable path="/Thesis/src/Flex4Example1.mxml"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="PostBox.as" tooltip="Thesis/src/probe2/PostBox.as">
+<persistable path="/Thesis/src/probe2/PostBox.as"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.mxml.MXMLEditor" name="ResizableTitleWindowSkin.mxml" tooltip="Thesis/src/markus/ringel/thesis/helper/ResizableTitleWindowSkin.mxml">
-<persistable path="/Thesis/src/markus/ringel/thesis/helper/ResizableTitleWindowSkin.mxml"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="TagBox.as" tooltip="Thesis/src/probe2/TagBox.as">
+<persistable path="/Thesis/src/probe2/TagBox.as"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="ResizableTitleWindow.as" tooltip="Thesis/src/markus/ringel/thesis/helper/ResizableTitleWindow.as">
-<persistable path="/Thesis/src/markus/ringel/thesis/helper/ResizableTitleWindow.as"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.mxml.MXMLEditor" name="Probe2.mxml" tooltip="Thesis/src/Probe2.mxml">
+<persistable path="/Thesis/src/Probe2.mxml"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="ResizablePanel.as" tooltip="Thesis/src/markus/ringel/thesis/helper/ResizablePanel.as">
-<persistable path="/Thesis/src/markus/ringel/thesis/helper/ResizablePanel.as"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.mxml.MXMLEditor" name="TagSkin.mxml" tooltip="Thesis/src/probe2/TagSkin.mxml">
+<persistable path="/Thesis/src/probe2/TagSkin.mxml"/>
 </file>
 </mruList>
 </workbench>

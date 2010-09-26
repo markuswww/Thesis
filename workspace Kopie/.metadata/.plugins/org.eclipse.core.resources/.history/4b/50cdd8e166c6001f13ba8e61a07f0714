@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009"
+			   xmlns:s="library://ns.adobe.com/flex/spark"
+			   xmlns:mx="library://ns.adobe.com/flex/mx"
+			   xmlns:components="probe.*">
+	<fx:Style source="assets/style/main.css" />
+	
+	<s:layout>
+		<s:HorizontalLayout gap="50" paddingLeft="50" paddingTop="50" />
+	</s:layout>
+	
+	<components:CustomPanel width="400" height="300"
+							styleName="advancedCustomPanel" backgroundColor="#CCCCCC"
+							title="Login">
+		<s:RichText text="Benutzername:" />
+		<s:TextInput width="100%" />
+		<s:RichText text="Passwort:" />
+		<s:TextInput width="100%" displayAsPassword="true" />
+		<s:HGroup width="100%" paddingTop="30">
+			<s:Button label="Cancel" width="50%" height="50" />
+			<s:Button label="Login" width="50%" height="50" />
+		</s:HGroup>
+		
+		<components:helpContent>
+			<![CDATA[Hier kann der Hilfetext stehen, der den Benutzer bei
+			der Eingabe seiner Daten unterstützt]]>
+		</components:helpContent>
+		
+	</components:CustomPanel>
+	
+	<components:CustomPanel width="400" height="400"
+							styleName="styledPanel" backgroundColor="#CCCCCC"
+							title="Styled">
+		<mx:RichTextEditor title="Ihre Nachricht"
+						   width="100%" height="100%" />
+		<components:helpContent>
+			<![CDATA[Bitte geben Sie RichText ein...]]>
+		</components:helpContent>
+	</components:CustomPanel>
+</s:Application>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="com.adobe.flexbuilder.editorcore.ui.pi.PropertiesView">
+		<item value="false" key="Layout"/>
+		<item value="false" key="Stil"/>
+		<item value="false" key="Größe und Position"/>
+		<item value="true" key="Allgemein"/>
+		<item value="1" key="ViewOption"/>
+	</section>
+</section>

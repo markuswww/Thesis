@@ -1,0 +1,19 @@
+package markus.ringel.thesis.model
+{
+	
+	public class Post
+	{
+		public var sourceRating:Number;
+		public var postRating:Number;
+		public var uri:String;
+		public var timestamp:Date;
+		public var summary:String = "";
+		public var title:String = "";
+		public var seen:Boolean = false;
+		public var color:String = "0xFFFFFF";
+		
+		public function Post()
+		{
+		}
+	}
+}

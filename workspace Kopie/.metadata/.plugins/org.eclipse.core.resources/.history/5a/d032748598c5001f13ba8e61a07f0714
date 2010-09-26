@@ -1,0 +1,119 @@
+
+	
+	import com.adobe.utils.XMLUtil;
+	import com.adobe.xml.syndication.rss.Item10;
+	import com.adobe.xml.syndication.rss.RSS10;
+	
+	import flash.events.Event;
+	import flash.events.IOErrorEvent;
+	import flash.events.SecurityErrorEvent;
+	import flash.net.URLLoader;
+	import flash.net.URLRequest;
+	import flash.net.URLRequestMethod;
+	
+	import mx.collections.ArrayList;
+	
+
+		
+		
+		private var loader:URLLoader;
+		
+		//url of rss 2.0 feed
+		private static const RSS_URL:String = "feed://www.businessweek.com/rss/technology.rss";
+		
+
+
+		public function getFeeds():void{
+			
+			var myFeeds:ArrayList=new ArrayList();
+			myFeeds.addItem("http://feeds.feedburner.com/MikeChambers/");
+			myFeeds.addItem("feed://www.sportschau.de/sp/index.jsp?rss=1");
+			for each(var myFeed:String in myFeeds)
+			{
+				writeOutput(myFeed.toString());
+				//onLoadPress(myFeed);
+				
+			}
+		}
+
+		//called when user presses the button to load feed
+		private function onLoadPress():void
+		{
+			
+			loader = new URLLoader();
+			
+			//request pointing to feed
+			
+		
+			var request:URLRequest = new URLRequest(RSS_URL);
+			request.method = URLRequestMethod.GET;
+			
+			//listen for when the data loads
+			loader.addEventListener(Event.COMPLETE, onDataLoad);
+			
+			//listen for error events
+			loader.addEventListener(IOErrorEvent.IO_ERROR, onIOError);
+			loader.addEventListener(SecurityErrorEvent.SECURITY_ERROR, onSecurityError);
+			
+			//load the feed data
+			loader.load(request);
+		}
+		
+		//called once the data has loaded from the feed
+		private function onDataLoad(e:Event):void
+		{
+			//get the raw string data from the feed
+			var rawRSS:String = URLLoader(e.target).data;
+			
+			//parse it as RSS
+			parseRSS(rawRSS);
+			
+		}
+		
+		//parses RSS 2.0 feed and prints out the feed titles into
+		//the text area
+		private function parseRSS(data:String):void
+		{
+			
+			//XMLSyndicationLibrary does not validate that the data contains valid
+			//XML, so you need to validate that the data is valid XML.
+			//We use the XMLUtil.isValidXML API from the corelib library.
+			//if(!XMLUtil.isValidXML(data))
+			//{
+			//	writeOutput("Feed does not contain valid XML.");
+			//	return;
+			//}	
+			
+			//create RSS20 instance
+			var rss:RSS10 = new RSS10();
+			
+			//parse the raw rss data
+			rss.parse(data);
+			
+			//get all of the items within the feed
+			var items:Array = rss.items;
+			
+			//loop through each item in the feed
+			for each(var item:Item10 in items)
+			{
+				//print out the title of each item
+				writeOutput(item.title);
+			}
+		}
+		
+		private function writeOutput(data:String):void
+		{
+			outputField.text += data + "\n";
+		}
+		
+		private function onIOError(e:IOErrorEvent):void
+		{
+			writeOutput("IOError : " + e.text);
+		}
+		
+		private function onSecurityError(e:SecurityErrorEvent):void
+		{
+			writeOutput("SecurityError : " + e.text);
+		}
+
+		

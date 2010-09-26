@@ -1,0 +1,396 @@
+<mockup version="1.0" skin="sketch" measuredW="1362" measuredH="787" mockupW="1024" mockupH="768">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="328" y="9" w="1024" h="768" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>http%3A//www.feed.ringel.com</text>
+        <verticalScrollbar>true</verticalScrollbar>
+      </controlProperties>
+    </control>
+    <control controlID="9" controlTypeID="com.balsamiq.mockups::TabBar" x="928" y="161" w="367" h="196" measuredW="150" measuredH="100" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>0.5</backgroundAlpha>
+        <borderStyle>square</borderStyle>
+        <color>16750848</color>
+        <selectedIndex>0</selectedIndex>
+        <tabHPosition>left</tabHPosition>
+        <tabVPosition>top</tabVPosition>
+        <text>Options</text>
+      </controlProperties>
+    </control>
+    <control controlID="135" controlTypeID="__group__" x="402" y="101" w="-1" h="-1" measuredW="461" measuredH="401" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <controlName>Friends</controlName>
+        <href>Friends%26bm%3BFriends.bmml%26bm%3BFriends.bmml%26bm%3BFriends.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%2274%2C92%2C535%2C493%22%20href%3D%22Friends.bmml%22%20alt%3D%22Friends%22%20id%3D%22135%22/%3E</map>
+      </controlProperties>
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::TabBar" x="0" y="0" w="461" h="401" measuredW="150" measuredH="100" zOrder="0" locked="false" isInGroup="135">
+          <controlProperties>
+            <backgroundAlpha>0.5</backgroundAlpha>
+            <color>16750848</color>
+            <selectedIndex>0</selectedIndex>
+            <tabHPosition>left</tabHPosition>
+            <tabVPosition>top</tabVPosition>
+            <text>Friends</text>
+          </controlProperties>
+        </control>
+        <control controlID="1" controlTypeID="__group__" x="9" y="31" w="-1" h="-1" measuredW="445" measuredH="366" zOrder="1" locked="false" isInGroup="135">
+          <groupChildrenDescriptors>
+            <control controlID="0" controlTypeID="__group__" x="57" y="0" w="319" h="198" measuredW="319" measuredH="198" zOrder="0" locked="false" isInGroup="1">
+              <groupChildrenDescriptors>
+                <control controlID="0" controlTypeID="com.balsamiq.mockups::CallOut" x="131" y="59" w="51" h="34" measuredW="47" measuredH="40" zOrder="0" locked="false" isInGroup="0">
+                  <controlProperties>
+                    <color>2848996</color>
+                    <text>ME</text>
+                  </controlProperties>
+                </control>
+                <control controlID="1" controlTypeID="com.balsamiq.mockups::CallOut" x="0" y="0" w="65" h="34" measuredW="63" measuredH="40" zOrder="1" locked="false" isInGroup="0">
+                  <controlProperties>
+                    <color>2848996</color>
+                    <text>Peter</text>
+                  </controlProperties>
+                </control>
+                <control controlID="2" controlTypeID="com.balsamiq.mockups::CallOut" x="254" y="59" w="65" h="34" measuredW="57" measuredH="40" zOrder="2" locked="false" isInGroup="0">
+                  <controlProperties>
+                    <backgroundAlpha>1</backgroundAlpha>
+                    <color>2848996</color>
+                    <text>Mike</text>
+                  </controlProperties>
+                </control>
+                <control controlID="3" controlTypeID="com.balsamiq.mockups::CallOut" x="247" y="126" w="66" h="36" measuredW="65" measuredH="40" zOrder="3" locked="false" isInGroup="0">
+                  <controlProperties>
+                    <color>2848996</color>
+                    <text>Golem</text>
+                  </controlProperties>
+                </control>
+                <control controlID="4" controlTypeID="com.balsamiq.mockups::CallOut" x="7" y="59" w="49" h="34" measuredW="50" measuredH="40" zOrder="4" locked="false" isInGroup="0">
+                  <controlProperties>
+                    <color>2848996</color>
+                    <text>Ron</text>
+                  </controlProperties>
+                </control>
+                <control controlID="5" controlTypeID="com.balsamiq.mockups::CallOut" x="174" y="164" w="91" h="34" measuredW="86" measuredH="40" zOrder="5" locked="false" isInGroup="0">
+                  <controlProperties>
+                    <color>2848996</color>
+                    <text>Wikileaks</text>
+                  </controlProperties>
+                </control>
+                <control controlID="6" controlTypeID="com.balsamiq.mockups::Arrow" x="65" y="23" w="70" h="37" measuredW="150" measuredH="100" zOrder="6" locked="false" isInGroup="0">
+                  <controlProperties>
+                    <text>Sports</text>
+                  </controlProperties>
+                </control>
+                <control controlID="7" controlTypeID="com.balsamiq.mockups::Arrow" x="182" y="86" w="72" h="40" measuredW="150" measuredH="100" zOrder="7" locked="false" isInGroup="0">
+                  <controlProperties>
+                    <text>Heise</text>
+                  </controlProperties>
+                </control>
+                <control controlID="8" controlTypeID="com.balsamiq.mockups::Arrow" x="182" y="66" w="72" h="9" measuredW="150" measuredH="100" zOrder="8" locked="false" isInGroup="0">
+                  <controlProperties>
+                    <text/>
+                  </controlProperties>
+                </control>
+                <control controlID="9" controlTypeID="com.balsamiq.mockups::Arrow" x="148" y="100" w="60" h="62" measuredW="150" measuredH="100" zOrder="9" locked="false" isInGroup="0">
+                  <controlProperties>
+                    <text/>
+                  </controlProperties>
+                </control>
+                <control controlID="10" controlTypeID="com.balsamiq.mockups::Arrow" x="59" y="71" w="72" h="11" measuredW="150" measuredH="100" zOrder="10" locked="false" isInGroup="0">
+                  <controlProperties>
+                    <text/>
+                  </controlProperties>
+                </control>
+              </groupChildrenDescriptors>
+            </control>
+            <control controlID="1" controlTypeID="com.balsamiq.mockups::FieldSet" x="0" y="196" w="444" h="169" measuredW="200" measuredH="170" zOrder="1" locked="false" isInGroup="1">
+              <controlProperties>
+                <text>Mike</text>
+              </controlProperties>
+            </control>
+            <control controlID="2" controlTypeID="com.balsamiq.mockups::DataGrid" x="1" y="260" w="444" h="106" measuredW="458" measuredH="106" zOrder="2" locked="false" isInGroup="1">
+              <controlProperties>
+                <borderStyle>square</borderStyle>
+                <hasHeader>true</hasHeader>
+                <hLines>false</hLines>
+                <rowHeight>18</rowHeight>
+                <selectedIndex>-1</selectedIndex>
+                <text>Feeds%2C%20Trust%2C%20URL%2C%20Subscribe%0ASports%2C%2078%2C%20www.mike.com/sports.rss%2C%20%5Bx%5D%0APhotography%2C%204%2C%20www.mike.com/photo.rss%2C%5B%5D%0ASoftware%20Developer%2C%2090%2C%20www.mike.com/softwarw.rss%2C%20%5Bx%5D%0AGossip%20TV%20Shows%2C%2068%2C%20www.mike.com/gossip.rss%2C%20%5Bx%5D</text>
+                <verticalScrollbar>true</verticalScrollbar>
+                <vLines>true</vLines>
+              </controlProperties>
+            </control>
+            <control controlID="3" controlTypeID="com.balsamiq.mockups::Label" x="6" y="212" w="-1" h="-1" measuredW="71" measuredH="23" zOrder="3" locked="false" isInGroup="1">
+              <controlProperties>
+                <text>Friend%20URL</text>
+              </controlProperties>
+            </control>
+            <control controlID="4" controlTypeID="com.balsamiq.mockups::TextInput" x="77" y="209" w="353" h="-1" measuredW="97" measuredH="27" zOrder="4" locked="false" isInGroup="1">
+              <controlProperties>
+                <text>www.mike.com</text>
+              </controlProperties>
+            </control>
+          </groupChildrenDescriptors>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="211" controlTypeID="__group__" x="439" y="517" w="-1" h="-1" measuredW="417" measuredH="202" zOrder="3" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::TabBar" x="0" y="0" w="417" h="202" measuredW="150" measuredH="100" zOrder="0" locked="false" isInGroup="211">
+          <controlProperties>
+            <backgroundAlpha>0.5</backgroundAlpha>
+            <color>16750848</color>
+            <selectedIndex>0</selectedIndex>
+            <tabHPosition>left</tabHPosition>
+            <tabVPosition>top</tabVPosition>
+            <text>Tags</text>
+          </controlProperties>
+        </control>
+        <control controlID="1" controlTypeID="__group__" x="246" y="41" w="-1" h="-1" measuredW="149" measuredH="81" zOrder="1" locked="false" isInGroup="211">
+          <groupChildrenDescriptors>
+            <control controlID="0" controlTypeID="com.balsamiq.mockups::TextInput" x="0" y="27" w="149" h="-1" measuredW="46" measuredH="27" zOrder="0" locked="false" isInGroup="1">
+              <controlProperties>
+                <align>center</align>
+                <backgroundAlpha>0.75</backgroundAlpha>
+                <color>15790322</color>
+                <state>focused</state>
+                <text>Sport</text>
+              </controlProperties>
+            </control>
+            <control controlID="1" controlTypeID="com.balsamiq.mockups::TextInput" x="0" y="54" w="149" h="-1" measuredW="84" measuredH="27" zOrder="1" locked="false" isInGroup="1">
+              <controlProperties>
+                <align>center</align>
+                <backgroundAlpha>0.75</backgroundAlpha>
+                <color>15790322</color>
+                <text>Nachrichten</text>
+              </controlProperties>
+            </control>
+            <control controlID="2" controlTypeID="com.balsamiq.mockups::TextInput" x="0" y="0" w="149" h="-1" measuredW="26" measuredH="27" zOrder="2" locked="false" isInGroup="1">
+              <controlProperties>
+                <align>center</align>
+                <backgroundAlpha>0.75</backgroundAlpha>
+                <color>15790322</color>
+                <text>IT</text>
+              </controlProperties>
+            </control>
+          </groupChildrenDescriptors>
+        </control>
+        <control controlID="2" controlTypeID="__group__" x="12" y="40" w="-1" h="-1" measuredW="194" measuredH="149" zOrder="2" locked="false" isInGroup="211">
+          <groupChildrenDescriptors>
+            <control controlID="0" controlTypeID="com.balsamiq.mockups::Label" x="0" y="1" w="38" h="23" measuredW="38" measuredH="23" zOrder="0" locked="false" isInGroup="2">
+              <controlProperties>
+                <text>Name</text>
+              </controlProperties>
+            </control>
+            <control controlID="1" controlTypeID="com.balsamiq.mockups::TextInput" x="53" y="0" w="52" h="-1" measuredW="46" measuredH="27" zOrder="1" locked="false" isInGroup="2">
+              <controlProperties>
+                <align>center</align>
+                <text>Sport</text>
+              </controlProperties>
+            </control>
+            <control controlID="2" controlTypeID="__group__" x="0" y="32" w="-1" h="-1" measuredW="108" measuredH="71" zOrder="2" locked="false" isInGroup="2">
+              <groupChildrenDescriptors>
+                <control controlID="0" controlTypeID="com.balsamiq.mockups::List" x="51" y="0" w="57" h="71" measuredW="100" measuredH="126" zOrder="0" locked="false" isInGroup="2">
+                  <controlProperties>
+                    <text>Sport%0AArd%0ANews</text>
+                  </controlProperties>
+                </control>
+                <control controlID="1" controlTypeID="com.balsamiq.mockups::Label" x="0" y="0" w="48" h="23" measuredW="43" measuredH="23" zOrder="1" locked="false" isInGroup="2">
+                  <controlProperties>
+                    <text>Feeds%3A</text>
+                  </controlProperties>
+                </control>
+              </groupChildrenDescriptors>
+            </control>
+            <control controlID="3" controlTypeID="com.balsamiq.mockups::Icon" x="0" y="123" w="-1" h="-1" measuredW="24" measuredH="24" zOrder="3" locked="false" isInGroup="2">
+              <controlProperties>
+                <icon>CircledPlusIcon%7Csmall</icon>
+              </controlProperties>
+            </control>
+            <control controlID="4" controlTypeID="com.balsamiq.mockups::Icon" x="29" y="123" w="-1" h="-1" measuredW="24" measuredH="24" zOrder="4" locked="false" isInGroup="2">
+              <controlProperties>
+                <color>0</color>
+                <icon>CircledMinusIcon%7Csmall</icon>
+              </controlProperties>
+            </control>
+            <control controlID="5" controlTypeID="com.balsamiq.mockups::ComboBox" x="108" y="34" w="-1" h="-1" measuredW="86" measuredH="23" zOrder="5" locked="false" isInGroup="2">
+              <controlProperties>
+                <text>add%20Feed</text>
+              </controlProperties>
+            </control>
+            <control controlID="6" controlTypeID="com.balsamiq.mockups::Button" x="56" y="121" w="-1" h="-1" measuredW="52" measuredH="28" zOrder="6" locked="false" isInGroup="2">
+              <controlProperties>
+                <text>Save</text>
+              </controlProperties>
+            </control>
+            <control controlID="7" controlTypeID="com.balsamiq.mockups::Icon" x="108" y="79" w="-1" h="-1" measuredW="24" measuredH="24" zOrder="7" locked="false" isInGroup="2">
+              <controlProperties>
+                <color>0</color>
+                <icon>CircledMinusIcon%7Csmall</icon>
+              </controlProperties>
+            </control>
+          </groupChildrenDescriptors>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="217" controlTypeID="com.balsamiq.mockups::TabBar" x="378" y="85" w="833" h="496" measuredW="150" measuredH="100" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>1</backgroundAlpha>
+        <color>16750848</color>
+        <hrefs>Overview%26bm%3BOverview.bmml%26bm%3BOverview.bmml%26bm%3BOverview.bmml</hrefs>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%2270%2C76%2C116%2C103%22%20href%3D%22Overview.bmml%22%20alt%3D%22Overview%22%20id%3D%22217_0%22/%3E%0A</map>
+        <selectedIndex>0</selectedIndex>
+        <tabHPosition>left</tabHPosition>
+        <tabVPosition>top</tabVPosition>
+        <text>Feeds</text>
+      </controlProperties>
+    </control>
+    <control controlID="220" controlTypeID="__group__" x="393" y="278" w="166" h="48" measuredW="130" measuredH="45" zOrder="11" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::ColorPicker" x="104" y="0" w="-1" h="-1" measuredW="26" measuredH="28" zOrder="0" locked="false" isInGroup="220"/>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Label" x="0" y="5" w="83" h="40" measuredW="35" measuredH="23" zOrder="1" locked="false" isInGroup="220">
+          <controlProperties>
+            <text>Color</text>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="221" controlTypeID="__group__" x="393" y="224" w="247" h="48" measuredW="153" measuredH="45" zOrder="12" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::Switch" x="85" y="0" w="-1" h="-1" measuredW="68" measuredH="28" zOrder="0" locked="false" isInGroup="221"/>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Label" x="0" y="5" w="85" h="40" measuredW="36" measuredH="23" zOrder="1" locked="false" isInGroup="221">
+          <controlProperties>
+            <text>Mute</text>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="222" controlTypeID="__group__" x="393" y="127" w="308" h="47" measuredW="308" measuredH="42" zOrder="13" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::Label" x="0" y="2" w="90" h="40" measuredW="38" measuredH="23" zOrder="0" locked="false" isInGroup="222">
+          <controlProperties>
+            <text>Name</text>
+          </controlProperties>
+        </control>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::TextInput" x="102" y="0" w="206" h="-1" measuredW="79" measuredH="27" zOrder="1" locked="false" isInGroup="222">
+          <controlProperties>
+            <align>center</align>
+            <text>Sportschau</text>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="223" controlTypeID="__group__" x="393" y="387" w="327" h="123" measuredW="327" measuredH="123" zOrder="14" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::List" x="192" y="0" w="135" h="123" measuredW="100" measuredH="126" zOrder="0" locked="false" isInGroup="223">
+          <controlProperties>
+            <text>Sport%0AArd%0ANews</text>
+          </controlProperties>
+        </control>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Label" x="0" y="0" w="183" h="40" measuredW="77" measuredH="23" zOrder="1" locked="false" isInGroup="223">
+          <controlProperties>
+            <text>Tagged%20with</text>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="224" controlTypeID="__group__" x="393" y="179" w="292" h="40" measuredW="292" measuredH="40" zOrder="15" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::HSlider" x="90" y="9" w="128" h="-1" measuredW="33" measuredH="11" zOrder="0" locked="false" isInGroup="224">
+          <controlProperties>
+            <value>89</value>
+          </controlProperties>
+        </control>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Label" x="0" y="0" w="104" h="40" measuredW="37" measuredH="23" zOrder="1" locked="false" isInGroup="224">
+          <controlProperties>
+            <text>Trust</text>
+          </controlProperties>
+        </control>
+        <control controlID="2" controlTypeID="com.balsamiq.mockups::Label" x="223" y="2" w="69" h="35" measuredW="27" measuredH="20" zOrder="2" locked="false" isInGroup="224">
+          <controlProperties>
+            <size>11</size>
+            <text>89%25</text>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="225" controlTypeID="__group__" x="393" y="328" w="327" h="47" measuredW="327" measuredH="45" zOrder="16" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::Label" x="0" y="5" w="107" h="40" measuredW="45" measuredH="23" zOrder="0" locked="false" isInGroup="225">
+          <controlProperties>
+            <text>Source</text>
+          </controlProperties>
+        </control>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::TextInput" x="135" y="0" w="192" h="-1" measuredW="82" measuredH="27" zOrder="1" locked="false" isInGroup="225">
+          <controlProperties>
+            <text>www.ard.de</text>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="227" controlTypeID="com.balsamiq.mockups::Button" x="644" y="527" w="74" h="31" measuredW="52" measuredH="28" zOrder="17" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Save</text>
+      </controlProperties>
+    </control>
+    <control controlID="229" controlTypeID="com.balsamiq.mockups::Icon" x="583" y="531" w="-1" h="-1" measuredW="24" measuredH="24" zOrder="18" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>CircledPlusIcon%7Csmall</icon>
+      </controlProperties>
+    </control>
+    <control controlID="230" controlTypeID="com.balsamiq.mockups::Icon" x="610" y="531" w="-1" h="-1" measuredW="24" measuredH="24" zOrder="19" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>0</color>
+        <icon>CircledMinusIcon%7Csmall</icon>
+      </controlProperties>
+    </control>
+    <control controlID="231" controlTypeID="com.balsamiq.mockups::TextInput" x="819" y="180" w="365" h="-1" measuredW="79" measuredH="27" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>center</align>
+        <backgroundAlpha>0.75</backgroundAlpha>
+        <color>2848996</color>
+        <state>focused</state>
+        <text>Sportschau</text>
+      </controlProperties>
+    </control>
+    <control controlID="232" controlTypeID="com.balsamiq.mockups::TextInput" x="819" y="217" w="365" h="-1" measuredW="89" measuredH="27" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>center</align>
+        <backgroundAlpha>0.75</backgroundAlpha>
+        <color>16776960</color>
+        <text>Coffee%20News</text>
+      </controlProperties>
+    </control>
+    <control controlID="233" controlTypeID="com.balsamiq.mockups::TextInput" x="819" y="255" w="365" h="-1" measuredW="61" measuredH="27" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>center</align>
+        <backgroundAlpha>0.75</backgroundAlpha>
+        <color>6989903</color>
+        <text>Ron%20Orp</text>
+      </controlProperties>
+    </control>
+    <control controlID="234" controlTypeID="com.balsamiq.mockups::TextInput" x="819" y="143" w="365" h="-1" measuredW="108" measuredH="27" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>center</align>
+        <backgroundAlpha>0.75</backgroundAlpha>
+        <color>13576743</color>
+        <text>Heise%20Developer</text>
+      </controlProperties>
+    </control>
+    <control controlID="235" controlTypeID="com.balsamiq.mockups::TextInput" x="819" y="292" w="365" h="-1" measuredW="49" measuredH="27" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>center</align>
+        <backgroundAlpha>0.75</backgroundAlpha>
+        <color>13576743</color>
+        <text>Golem</text>
+      </controlProperties>
+    </control>
+    <control controlID="236" controlTypeID="com.balsamiq.mockups::TextInput" x="819" y="331" w="365" h="-1" measuredW="70" measuredH="27" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>center</align>
+        <backgroundAlpha>0.75</backgroundAlpha>
+        <color>13421772</color>
+        <text>Wikileaks</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

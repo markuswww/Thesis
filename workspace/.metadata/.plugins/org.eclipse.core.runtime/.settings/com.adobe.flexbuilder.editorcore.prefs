@@ -1,6 +1,6 @@
-#Tue Sep 14 13:58:32 CEST 2010
+#Sat Sep 25 12:47:00 CEST 2010
 eclipse.preferences.version=1
-prefGetterSetterInsertLocationIndex=2
-activeViewIDs3=com.adobe.flexbuilder.packageexplorer,org.eclipse.ui.views.ContentOutline,org.eclipse.ui.views.ProblemView,com.adobe.flexbuilder.mxml.editor.states.StatesViewer,com.adobe.flexbuilder.mxml.editor.inspector.view.PropertiesView
-activeViewIDs2=com.adobe.flexbuilder.packageexplorer,org.eclipse.ui.views.ContentOutline,org.eclipse.ui.views.ProblemView
+prefGetterSetterInsertLocationIndex=1
+activeViewIDs3=com.adobe.flexbuilder.packageexplorer,com.adobe.flexbuilder.mxml.editor.components.ComponentsView,org.eclipse.ui.views.ProblemView,com.adobe.flexbuilder.mxml.editor.states.StatesViewer,com.adobe.flexbuilder.mxml.editor.inspector.view.PropertiesView
+activeViewIDs2=org.eclipse.ui.views.ProblemView,com.adobe.flexbuilder.packageexplorer,org.eclipse.ui.views.ContentOutline
 autoViewIDs=com.adobe.flexbuilder.mxml.editor.states.StatesViewer\=design-mxml\=0\=true,com.adobe.flexbuilder.mxml.editor.components.ComponentsView\=design-mxml\=0\=true,com.adobe.flexbuilder.mxml.editor.inspector.view.PropertiesView\=design-mxml;design-css\=0\=true,com.adobe.flexbuilder.as.editor.asdocviewer\=code\=0\=false,com.adobe.flexbuilder.mxml.editor.AppearanceView\=design-mxml\=1\=false

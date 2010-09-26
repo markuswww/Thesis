@@ -1,0 +1,57 @@
+
+        package sampleBalsamiqClient
+        {
+          import mx.containers.Canvas;
+          import mx.rpc.remoting.RemoteObject;
+          import mx.controls.Alert;
+          import mx.rpc.events.ResultEvent;
+          import mx.rpc.events.FaultEvent;
+          import mx.rpc.AsyncToken;
+          import mx.rpc.IResponder;
+          import mx.collections.ArrayCollection;
+
+          public class MockupSampleController extends Canvas
+          {
+            [Bindable]
+            public var model:MockupSampleModel = new MockupSampleModel();
+            
+            private var remoteObject:RemoteObject;
+            
+            public function MockupSampleController()
+		        {
+			        super();
+              remoteObject  = new RemoteObject("GenericDestination");
+              remoteObject.source = "sampleBalsamiqServer.MockupSampleService"; 
+              
+              
+              remoteObject.getListProvider0.addEventListener("result",getListProvider0Handler);      
+                  
+              
+              remoteObject.addEventListener("fault", onFault);
+              
+              initializeController();
+		        }
+            
+            public function onFault (event:FaultEvent):void
+            {
+              Alert.show(event.fault.faultString, "Error");
+            }
+            
+            public function initializeController():void
+            {
+              
+              remoteObject.getListProvider0();        
+                  
+            }
+            
+            
+            public function getListProvider0Handler(event:ResultEvent):void      
+            {
+              model.listProvider0 = new ArrayCollection(event.result as Array);
+            }
+                
+            
+          }
+          
+        }
+      
